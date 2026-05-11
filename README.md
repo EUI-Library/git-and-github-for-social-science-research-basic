@@ -1,6 +1,6 @@
 # Slide deck for the training session "Git and GitHub for Social Science Research - basic level: keep track of changes in your research" (first given in Spring 2026)
 
-These slides are released under a [Creative Commons Attribution International 4.0](https://creativecommons.org/licenses/by/4.0/) licence. Any feedback and reuse of content is welcome!
+These slides are prepared in the context of the EUI Library #researchskils training programme.
 
 * Web version: TBD
 * GitHub repo (this repository): 
