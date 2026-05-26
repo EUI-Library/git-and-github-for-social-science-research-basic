@@ -19,13 +19,13 @@ Any feedback and reuse of content is welcome!
 
 ## Agenda
 
-- Introduction (15 minutes)
+- Introduction (10 minutes)
 - Settinng up the environment (15 minutes)
   - Install git and GitHub Desktop
   - Create a GitHub account and login into GitHub Desktop
   - Install and set up VS Code
   - Install and set up R Studio
-- Your first repository (30 minutes)
+- Your first repository (20 minutes)
   - Create a repository / clone a repository
     - Clone the example repository
     - Create your own one
@@ -33,4 +33,9 @@ Any feedback and reuse of content is welcome!
     - Modify a file
     - Stage what to commit
     - Commit with message
+- Look at the history of your changes (10 minutes)
+  - Understand commit history
+  - Viewing history in tools
+  - Understanding "undo" in the Git and GitHub context
+- Open discussion
 
