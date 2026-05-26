@@ -4,6 +4,8 @@ These slides are prepared in the context of the EUI Library #researchskils train
 
 * Web version: TBD
 * GitHub repo (this repository): 
+
+Instructors: @mdubied and @simosacchi
  
 Slides have been prepared adapting the demo slides for working with [Revealjs](https://revealjs.com/) in [Quarto](https://quarto.org/).
 
