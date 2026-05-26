@@ -16,3 +16,21 @@ For questions and feedback open a Github issue in the repo or [get in touch](htt
 These slides are released under a [Creative Commons Attribution International 4.0](https://creativecommons.org/licenses/by/4.0/) licence. (see [LICENSE](LICENSE.txt))
 
 Any feedback and reuse of content is welcome!
+
+## Agenda
+
+- Introduction (15 minutes)
+- Settinng up the environment (15 minutes)
+  - Install git and GitHub Desktop
+  - Create a GitHub account and login into GitHub Desktop
+  - Install and set up VS Code
+  - Install and set up R Studio
+- Your first repository (30 minutes)
+  - Create a repository / clone a repository
+    - Clone the example repository
+    - Create your own one
+  - The three stage worflow: modify / stage / commit
+    - Modify a file
+    - Stage what to commit
+    - Commit with message
+

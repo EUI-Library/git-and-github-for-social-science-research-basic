@@ -81,6 +81,25 @@ Version control is like a 'recording' of history
 
 ...Rewind and play changes back again!
 
+## Why Should Social Scientists Care? {.smaller}
+
+<br />
+
+| Challenge | Git Solution |
+|-----------|-------------|
+| "This chapter went sideways" | You can always track back when it deviated |
+| "Which script produced this table?" | Every output is linked to exact code |
+| "My collaborator broke something" | Revert to a working state instantly |
+| "Reviewers want my analysis code" | Share a clean, documented history |
+| "I deleted a crucial file" | Nothing is ever truly gone |
+
+
+<br/>
+
+::: {.callout-tip}
+Git is a core infrastructure for [**reproducible research**](https://book.the-turing-way.org/){data-preview-link="true"}
+:::
+
 ## Now you might wonder...
 
 What about: 
@@ -109,32 +128,13 @@ Git is a **version control system** — a tool that tracks changes to files over
 - Records *who* changed *what* and *why*
 - Enables safe collaboration with others
 
-<br/>
-
 ::: {.callout-note appearance="minimal"}
 Version control is like an **unlimited ‘undo/redo’**
 
 Originally built for software — now essential for research.
 :::
 
-## Why Should Social Scientists Care? {.smaller}
 
-<br />
-
-| Challenge | Git Solution |
-|-----------|-------------|
-| "This chapter went sideways" | You can always track back when it deviated |
-| "Which script produced this table?" | Every output is linked to exact code |
-| "My collaborator broke something" | Revert to a working state instantly |
-| "Reviewers want my analysis code" | Share a clean, documented history |
-| "I deleted a crucial file" | Nothing is ever truly gone |
-
-
-<br/>
-
-::: {.callout-tip}
-Git is a core infrastructure for [**reproducible research**](https://book.the-turing-way.org/){data-preview-link="true"}
-:::
 
 ## What is GitHub {.smaller}
 
@@ -175,14 +175,14 @@ Other platforms: **GitLab**, **Bitbucket** — same Git, different banks.
 2. Create a GitHub account on [GitHub](https://github.com/signup){data-preview-link="true"}
 3. Download and install [GitHub Desktop](https://github.com/signup){data-preview-link="true"}
 
-## Steps to start
+## Steps to start a project
 
 1. Configure Git [[Using GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop){data-preview-link="true"} or command line]
 2. Create a folder (on your laptop)
 3. Init a repository within the folder
 4. Create/add your first file
 
-## Starting a Project in GitHub Desktop
+## Starting a Project in GitHub Desktop {.smaller}
 
 **Option A — New local project:**
 
@@ -197,18 +197,21 @@ Other platforms: **GitLab**, **Bitbucket** — same Git, different banks.
 2. Browse your GitHub repos or paste a URL
 3. Choose a local folder → **Clone**
 
-> The repo now lives both on GitHub and on your computer.
-
+::: {.callout-note appearance="minimal"}
+The repo now lives both on GitHub and on your computer.
+:::
 
 ## Core Concepts: The Three Areas
 
 <br />
-
+::: {.r-fit-text}
 ```
 Working Directory  →  Staging Area  →  Repository
    (your files)       (selected         (permanent
                         changes)         history)
 ```
+:::
+
 
 <br />
 
