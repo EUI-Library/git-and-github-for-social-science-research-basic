@@ -9,7 +9,7 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.38">
 
-  <meta name="author" content="Mathieu Dubiet, Simone Sacchimathieu.dubiet@eui.eu, simone.sacchi@eui.eu">
+  <meta name="author" content="Mathieu Dubiet | Simone Sacchimathieu.dubiet@eui.eu | simone.sacchi@eui.eu">
   <title> Git and GitHub for Social Science Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -198,14 +198,14 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="images/EUI-logo-acronym.svg" data-background-position="top 5% center" data-background-repeat="no-repeat" data-background-size="10%" class="quarto-title-block center">
+<section id="title-slide" data-background-image="images/EUI-logo-acronym.svg" data-background-position="top 10% center" data-background-repeat="no-repeat" data-background-size="20%" class="quarto-title-block center">
   <h1 class="title"><br>Git and GitHub for Social Science Research</h1>
   <p class="subtitle">Basic level</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<strong>Mathieu Dubiet</strong>, <strong>Simone Sacchi</strong><br><a href="mailto:mathieu.dubiet@eui.eu">mathieu.dubiet@eui.eu</a>, <a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a> 
+<strong>Mathieu Dubiet</strong> | <strong>Simone Sacchi</strong><br><a href="mailto:mathieu.dubiet@eui.eu">mathieu.dubiet@eui.eu</a> | <a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a> 
 </div>
 </div>
 </div>
@@ -216,12 +216,27 @@
 <h1>Before we start</h1>
 
 </section>
-<section id="any-knowledge-already" class="slide level2">
-<h2>Any knowledge already?</h2>
+<section id="any-knowledge-yet" class="slide level2">
+<h2>Any knowledge yet?</h2>
 <ul>
 <li>How many of you are already familiar with Git/GitHub and/or other so called “version control” systems?</li>
 <li>How many of you have already installed Git on your computer?</li>
 </ul>
+</section>
+<section id="agenda-for-today" class="slide level2">
+<h2>Agenda for today</h2>
+<ul>
+<li>Introduction</li>
+<li>Setting up the environment</li>
+<li>Your first (or maybe not?) repository</li>
+<li>The git (and GitHub) workflow to track changes</li>
+<li>Looking at the history of your changes and what “undo” means</li>
+</ul>
+</section></section>
+<section>
+<section id="introduction" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Introduction</h1>
+
 </section>
 <section id="learning-objetives" class="slide level2">
 <h2>Learning objetives</h2>
@@ -264,8 +279,8 @@ my_analysis_THIS_ONE.R</code></pre>
 
 <img data-src="images/play-changes.png" class="r-stretch quarto-figure-center"><p class="caption">Three documents. The first has two paragraphs. The second has a modified paragraph. The third has an additional paragraph</p><p>…Rewind and play changes back again!</p>
 </section>
-<section id="why-should-social-scientists-care" class="slide level2 smaller">
-<h2>Why Should Social Scientists Care?</h2>
+<section id="why-should-researchers-care" class="slide level2 smaller">
+<h2>Why should researchers care?</h2>
 <p><br></p>
 <table class="caption-top">
 <colgroup>
@@ -325,14 +340,14 @@ my_analysis_THIS_ONE.R</code></pre>
 <li><code>Dropbox</code>?</li>
 <li>(etc. etc.)</li>
 </ul>
-<p><strong>They do provide a “history of changes”!</strong></p>
+<p><strong>They do provide a “history of changes”, so what?</strong></p>
 </section>
 <section id="advantages" class="slide level2">
 <h2>Advantages</h2>
 <ul>
 <li><strong>Intentional history</strong> — every saved version has a message explaining why it changed, not just when</li>
-<li><strong>Real collaboration</strong> — branching and merging let multiple people work in parallel without overwriting each other</li>
 <li><strong>Works on anything</strong> — code, data, config files, and integrates with automation tools far beyond what a document editor supports</li>
+<li><strong>Real collaboration</strong> — branching and merging let multiple people work in parallel without overwriting each other</li>
 </ul>
 </section></section>
 <section>
@@ -341,7 +356,7 @@ my_analysis_THIS_ONE.R</code></pre>
 
 </section>
 <section id="what-is-git" class="slide level2">
-<h2>What Is Git?</h2>
+<h2>What is Git?</h2>
 <p>Git is a <strong>version control system</strong> — a tool that tracks changes to files over time.</p>
 <ul>
 <li>Takes “snapshots” of your project at key moments</li>
@@ -359,13 +374,13 @@ my_analysis_THIS_ONE.R</code></pre>
 </div>
 </section>
 <section id="what-is-github" class="slide level2 smaller">
-<h2>What is GitHub</h2>
-<p>GitHub is a cloud-based platform that allows people to store, manage, and collaborate on “code” projects using <code>Git</code></p>
+<h2>What is GitHub?</h2>
+<p>GitHub is a cloud-based platform that allows people to store, manage, and collaborate on research projects using <code>Git</code></p>
 <p>Core features:</p>
 <ul>
-<li><strong>Git Hosting</strong>: It hosts Git repositories (projects), which allows developers to track changes to their code over time.</li>
-<li><strong>Collaboration</strong>: Multiple developers can work on the same project simultaneously, creating “branches” to test new features without breaking the main, stable code.</li>
-<li><strong>Social Coding</strong>: Users can share their public projects, follow others, and contribute to open-source software.</li>
+<li><strong>Git Hosting and backup</strong>: It hosts Git repositories (projects), which allows you to be safe and work from multiple computers.</li>
+<li><strong>Collaboration</strong>: Multiple researchers can work on the same project simultaneously, creating “branches” to test new features without breaking the main, stable work.</li>
+<li><strong>Social Coding</strong>: Users can share their projects openly, follow others, and contribute to building reproducibility and trust in research.</li>
 </ul>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -376,7 +391,7 @@ my_analysis_THIS_ONE.R</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Read more about GitHub in <a href="https://docs.github.com/en" data-preview-link="true">GitHub doc</a></p>
+<p>Read more about GitHub in <a href="https://docs.github.com/en" target="_blank">GitHub doc</a></p>
 </div>
 </div>
 </div>
@@ -413,35 +428,56 @@ my_analysis_THIS_ONE.R</code></pre>
 <div class="callout callout-note no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
-<p>Other platforms: <strong>GitLab</strong>, <strong>Bitbucket</strong> — same Git, different banks.</p>
+<p>Other platforms: <a href="https://about.gitlab.com/" target="_blank">GitLab</a>, <a href="https://bitbucket.org/" target="_blank">Bitbucket</a> — same Git, different banks.</p>
 </div>
 </div>
 </div>
 </section></section>
 <section>
-<section id="lets-start-with-git-and-githib" class="title-slide slide level1 center" style="text-align: center;">
-<h1>Let’s start with Git and GitHib</h1>
-<p>(and create a Git repository)</p>
+<section id="lets-create-a-repository-with-git-and-github" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Let’s create a repository with Git and GitHub</h1>
+
 </section>
 <section id="prerequisites" class="slide level2">
 <h2>Prerequisites:</h2>
 <ol type="1">
-<li>Download and install Git from the <a href="https://git-scm.com/install/" data-preview-link="true">Git website</a></li>
-<li>Create a GitHub account on <a href="https://github.com/signup" data-preview-link="true">GitHub</a></li>
-<li>Download and install <a href="https://github.com/signup" data-preview-link="true">GitHub Desktop</a></li>
+<li>Download and install Git from the <a href="https://git-scm.com/install/" target="_blank">Git website</a></li>
+<li>Create a GitHub account on <a href="https://github.com/signup" target="_blank">GitHub</a></li>
+<li>Download and install <a href="https://github.com/signup" target="_blank">GitHub Desktop</a></li>
+<li>Configure Git [<a href="https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop" data-preview-link="true">Using GitHub Desktop</a> or command line] (only the first time)</li>
 </ol>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p>If you work with <code>VS Code</code> or <code>R Studio</code> we will set them up later</p>
+</div>
+</div>
+</div>
 </section>
-<section id="steps-to-start-a-project" class="slide level2">
-<h2>Steps to start a project</h2>
+<section id="start-a-project-using-git" class="slide level2">
+<h2>Start a project using Git</h2>
 <ol type="1">
-<li>Configure Git [<a href="https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop" data-preview-link="true">Using GitHub Desktop</a> or command line]</li>
-<li>Create a folder (on your laptop)</li>
-<li>Init a repository within the folder</li>
+<li>Create a folder (on your computer)</li>
+<li>Init a local repository within the folder</li>
 <li>Create/add your first file</li>
+<li>Now on, Git will monitor the folder for changes</li>
 </ol>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>So far, your Git repository lives <strong>only locally</strong> on your computer</p>
+</div>
+</div>
+</div>
 </section>
-<section id="starting-a-project-in-github-desktop" class="slide level2 smaller">
-<h2>Starting a Project in GitHub Desktop</h2>
+<section id="start-a-project-using-github-desktop" class="slide level2 smaller">
+<h2>Start a project using GitHub Desktop</h2>
 <p><strong>Option A — New local project:</strong></p>
 <ol type="1">
 <li><code>File</code> → <code>New Repository</code></li>
@@ -452,53 +488,67 @@ my_analysis_THIS_ONE.R</code></pre>
 <p><strong>Option B — Clone an existing repo:</strong></p>
 <ol type="1">
 <li><code>File</code> → <code>Clone Repository</code></li>
-<li>Browse your GitHub repos or paste a URL</li>
+<li>Browse your GitHub repos or paste a URL (e.g.&nbsp;our demo repo: [add demo URL])</li>
 <li>Choose a local folder → <strong>Clone</strong></li>
 </ol>
-<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
 <div class="callout-content">
-<p>The repo now lives both on GitHub and on your computer.</p>
+<p>The repository now lives both <strong>on your computer</strong> and on <strong>GitHub</strong></p>
 </div>
 </div>
 </div>
+</section></section>
+<section id="lets-do-it-together" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Let’s do it together</h1>
+
+</section>
+
+<section>
+<section id="track-changes" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Track changes</h1>
+
 </section>
 <section id="core-concepts-the-three-areas" class="slide level2">
-<h2>Core Concepts: The Three Areas</h2>
-<p><br> ::: {.r-fit-text}</p>
+<h2>Core concepts: the three areas</h2>
+<p><br></p>
+<div class="r-fit-text">
 <pre><code>Working Directory  →  Staging Area  →  Repository
-   (your files)       (selected         (permanent
-                        changes)         history)</code></pre>
-<p>:::</p>
+   (your files)       (selected)        (permanent)</code></pre>
+</div>
 <p><br></p>
 <p>Think of it like writing a paper:</p>
 <ul>
 <li><strong>Working Directory</strong> → your working draft</li>
 <li><strong>Staging Area</strong> → pages you’ve selected to submit</li>
-<li><strong>Repository</strong> → the final, archived version</li>
+<li><strong>Repository</strong> → the final, submitted version (that you can still revise!)</li>
 </ul>
 </section>
-<section id="your-first-git-commands" class="slide level2">
-<h2>Your First Git Commands</h2>
-<p>Configure <code>git</code> from the command-line, here’s how:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="co"># Set up once on your machine</span></span>
-<span id="cb3-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Ada Lovelace"</span></span>
-<span id="cb3-3"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"ada@research.ac"</span></span>
-<span id="cb3-4"><a href=""></a></span>
-<span id="cb3-5"><a href=""></a><span class="co"># Start tracking a project</span></span>
-<span id="cb3-6"><a href=""></a><span class="fu">git</span> init</span>
-<span id="cb3-7"><a href=""></a></span>
-<span id="cb3-8"><a href=""></a><span class="co"># See what has changed</span></span>
-<span id="cb3-9"><a href=""></a><span class="fu">git</span> status</span>
-<span id="cb3-10"><a href=""></a></span>
-<span id="cb3-11"><a href=""></a><span class="co"># Stage a file</span></span>
-<span id="cb3-12"><a href=""></a><span class="fu">git</span> add analysis.R</span>
-<span id="cb3-13"><a href=""></a></span>
-<span id="cb3-14"><a href=""></a><span class="co"># Save a snapshot with a message</span></span>
-<span id="cb3-15"><a href=""></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add baseline regression model"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="git-workflow-with-remote-repository" class="slide level2 smaller">
+<h2>Git workflow (with remote repository)</h2>
+<p><a title="Lbhtw, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git_data_flow.png"><img alt="Git data flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Git_data_flow.png/960px-Git_data_flow.png" width="50%"></a></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Commits are your research diary — make them meaningful. The complete history of <strong>commits</strong> and metadata is a <strong>repository</strong></p>
+</div>
+</div>
+</div>
 </section>
 <section id="the-commit-heart-of-git" class="slide level2 smaller">
-<h2>The Commit: Heart of Git</h2>
+<h2>The commit: heart of Git</h2>
 <p>A <strong>commit</strong> is a permanent snapshot of your project with:</p>
 <ul>
 <li>A unique ID (hash): <code>a3f92bc</code></li>
@@ -535,10 +585,22 @@ my_analysis_THIS_ONE.R</code></pre>
 ❌ "fixed stuff"
 ❌ "asdfgh"</code></pre>
 </section>
-<section id="what-to-track-and-what-not-to-track" class="slide level2">
-<h2>What to Track (and What Not to Track)</h2>
-<p><strong>✅ Track these:</strong> - R, Python, Stata scripts (<code>.R</code>, <code>.py</code>, <code>.do</code>) - Quarto / RMarkdown files (<code>.qmd</code>, <code>.Rmd</code>) - Small, raw data files (with permission) - Documentation and codebooks</p>
-<p><strong>❌ Do not track these (use <code>.gitignore</code>):</strong> - Large datasets (use OSF, Zenodo, or Dataverse) - Sensitive / personally identifiable data - Temporary files (<code>.Rhistory</code>, <code>__pycache__</code>) - Output files that can be regenerated</p>
+<section id="what-to-track-and-what-not-to-track" class="slide level2 smaller">
+<h2>What to track (and what NOT to track)</h2>
+<p><strong>✅ Track these:</strong></p>
+<ul>
+<li>R, Python, Stata scripts (<code>.R</code>, <code>.py</code>, <code>.do</code>)</li>
+<li>Quarto / RMarkdown files (<code>.qmd</code>, <code>.Rmd</code>)</li>
+<li>(Small) raw data files (with permission)</li>
+<li>Documentation and codebooks</li>
+</ul>
+<p><strong>❌ Do not track these (use <code>.gitignore</code>):</strong></p>
+<ul>
+<li>Large datasets (use a Data Repository)</li>
+<li>Sensitive / personally identifiable data</li>
+<li>Temporary files (<code>.Rhistory</code>, <code>__pycache__</code>)</li>
+<li>Output files that can be regenerated</li>
+</ul>
 </section>
 <section id="ingnoring-things" class="slide level2">
 <h2>Ingnoring things</h2>
@@ -558,16 +620,27 @@ my_analysis_THIS_ONE.R</code></pre>
 <li>It should be committed in your repository</li>
 </ul></li>
 </ul>
+</section></section>
+<section id="lets-do-it-together-1" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Let’s do it together</h1>
+
 </section>
-<section id="git-and-open-science" class="slide level2">
-<h2>Git and Open Science</h2>
-<p>Git + GitHub enables powerful open science practices:</p>
+
+<section>
+<section id="check-the-history-of-our-work" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Check the history of our work</h1>
+
+</section>
+<section id="understanding-commit-history" class="slide level2 smaller">
+<h2>Understanding Commit History</h2>
+<p>Your project’s history is a sequence of commits, each identified by a unique hash — a long alphanumeric string like <code>a3f92bc</code>.</p>
+<p>Each commit records:</p>
 <ul>
-<li><strong>Persistent links</strong> to exact code used in a paper</li>
-<li><strong>Tags and releases</strong> to mark submission versions</li>
-<li><strong>Zenodo integration</strong> — auto-DOI for every release</li>
-<li><strong>Pre-registration companion</strong> — commit your analysis plan before data collection</li>
-<li><strong>Issue tracker</strong> — structured feedback from reviewers or collaborators</li>
+<li>Which files changed and exactly what changed in each file</li>
+<li>Who made the commit (name and email)</li>
+<li>When it was committed</li>
+<li>The commit message describing the change</li>
+<li>A pointer to the previous commit (parent)</li>
 </ul>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -578,10 +651,131 @@ my_analysis_THIS_ONE.R</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>A public GitHub repo is increasingly expected at submission.</p>
+<p>This <strong>chain of commits</strong> is what makes Git a reliable audit trail — equivalent to a laboratory notebook for your research.</p>
 </div>
 </div>
 </div>
+</section>
+<section id="viewing-history-and-undo-changes" class="slide level2">
+<h2>Viewing history (and undo changes)</h2>
+<p>You can check the history of your work:</p>
+<ul>
+<li>In GitHub Desktop</li>
+<li>In VS Code</li>
+<li>In R Studio</li>
+<li>On GitHub (web browser)</li>
+<li>Using the command line</li>
+</ul>
+</section></section>
+<section id="lets-do-it-together-2" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Let’s do it together</h1>
+
+</section>
+
+<section>
+<section id="wrap-up-and-takeaways" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Wrap up and takeaways</h1>
+
+</section>
+<section id="key-takeaways" class="slide level2 smaller">
+<h2>Key Takeaways</h2>
+<ol type="1">
+<li><strong>Commit often</strong> — small, meaningful snapshots</li>
+<li><strong>Write good messages</strong> — future you will thank you</li>
+<li><strong>Push to GitHub</strong> — backup, collaboration, transparency</li>
+<li><strong>Use <code>.gitignore</code></strong> — keep sensitive data out</li>
+<li><strong>Branch freely</strong> — experiment without fear (next training session!)</li>
+</ol>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Git gives your research a memory.</strong></p>
+</div>
+</div>
+</div>
+</section>
+<section id="seriously-git-push-when-done" class="slide level2">
+<h2>Seriously, <code>git push</code> when done…</h2>
+
+<img data-src="images/git_fire_notice.jpg" class="r-stretch quarto-figure-center"><p class="caption">A sign: In case of fire 1. git commit, 2. git push, 3. leave building</p></section>
+<section id="git-reproducibility-and-open-science" class="slide level2">
+<h2>Git, reproducibility and Open Science</h2>
+<p>Git + GitHub enables powerful open science practices:</p>
+<ul>
+<li><strong>Persistent links</strong> to exact code used in a paper</li>
+<li><strong>Tags and releases</strong> to mark submission versions</li>
+<li><strong>GitHub/Zenodo integration</strong> — auto-DOI for every release</li>
+<li><strong>GitHub Issue tracker</strong> — structured feedback from reviewers or collaborators</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>A public GitHub repository is increasingly expected at submission.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="your-feedback-matters" class="slide level2">
+<h2>Your feedback matters!</h2>
+
+<img data-src="./images/QRCode%20for%20Git%20and%20GitHub%20for%20Social%20Science%20Research_%20basic%20level.png" class="quarto-figure quarto-figure-center r-stretch"><p>Link: <a href="https://forms.cloud.microsoft/e/dZwq7DAWPE">https://forms.cloud.microsoft/e/dZwq7DAWPE</a></p>
+</section>
+<section id="any-question" class="slide level2 center" style="text-align: center;" data-background-image="/images/just_science_done_right.png" data-background-position="top right" data-background-repeat="no-repeat" data-background-size="15%">
+<h2>Any question?</h2>
+<div style="text-align: center; margin-top: 1em">
+<p>Simone Sacchi</p>
+<p>Research Data Librarian, EUI Library</p>
+<p><a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a></p>
+<p><a href="mailto:resdata@eui.eu">resdata@eui.eu</a></p>
+<p>(Also Teams and BF-278)</p>
+<p><a href="https://eui.libguides.com/research-data-guide" data-preview-link="true"><strong>EUI Library Research Data Guide</strong></a> - <a href="https://www.eui.eu/events?u=lib" data-preview-link="true"><strong>EUI Library Trainings</strong></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/eui_view.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="essential-resources" class="slide level2">
+<h2>Essential resources</h2>
+<p><a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em></a> by Jenny Bryan — free online, written for researchers.</p>
+</section>
+<section id="end-of-the-presentation" class="slide level2 center" style="text-align: center;">
+<h2>End of the presentation</h2>
+</section>
+<section id="backup-slides" class="slide level2 center" style="text-align: center;">
+<h2>BACKUP SLIDES</h2>
+</section>
+<section id="your-first-git-commands" class="slide level2">
+<h2>Your First Git Commands</h2>
+<p>Configure <code>git</code> from the command-line, here’s how:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="co"># Set up once on your machine</span></span>
+<span id="cb4-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Ada Lovelace"</span></span>
+<span id="cb4-3"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"ada@research.ac"</span></span>
+<span id="cb4-4"><a href=""></a></span>
+<span id="cb4-5"><a href=""></a><span class="co"># Start tracking a project</span></span>
+<span id="cb4-6"><a href=""></a><span class="fu">git</span> init</span>
+<span id="cb4-7"><a href=""></a></span>
+<span id="cb4-8"><a href=""></a><span class="co"># See what has changed</span></span>
+<span id="cb4-9"><a href=""></a><span class="fu">git</span> status</span>
+<span id="cb4-10"><a href=""></a></span>
+<span id="cb4-11"><a href=""></a><span class="co"># Stage a file</span></span>
+<span id="cb4-12"><a href=""></a><span class="fu">git</span> add analysis.R</span>
+<span id="cb4-13"><a href=""></a></span>
+<span id="cb4-14"><a href=""></a><span class="co"># Save a snapshot with a message</span></span>
+<span id="cb4-15"><a href=""></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add baseline regression model"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="multiple-contributors-branching" class="slide level2">
 <h2>Multiple contributors (branching)</h2>
@@ -605,67 +799,8 @@ my_analysis_THIS_ONE.R</code></pre>
 </ul></li>
 </ul>
 
-<img data-src="images/merge.png" class="r-stretch quarto-figure-center"><p class="caption">Three documents. On the left are the two modified documents from the previous slide. On the right is a single that incorporates both of those changes</p></section>
-<section id="seriously-git-push-when-done" class="slide level2">
-<h2>Seriously, <code>git push</code> when done…</h2>
 
-<img data-src="images/git_fire_notice.jpg" class="r-stretch quarto-figure-center"><p class="caption">A sign: In case of fire 1. git commit, 2. git push, 3. leave building</p></section>
-<section id="key-takeaways" class="slide level2">
-<h2>Key Takeaways</h2>
-<p><strong>Git gives your research a memory.</strong></p>
-<ol type="1">
-<li><strong>Commit often</strong> — small, meaningful snapshots</li>
-<li><strong>Write good messages</strong> — future you will thank you</li>
-<li><strong>Branch freely</strong> — experiment without fear</li>
-<li><strong>Push to GitHub</strong> — backup, collaboration, transparency</li>
-<li><strong>Use <code>.gitignore</code></strong> — keep sensitive data out</li>
-</ol>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>Git gives your research a memory.</strong></p>
-</div>
-</div>
-</div>
-</section>
-<section id="essential-resources" class="slide level2">
-<h2>Essential resources</h2>
-<p><a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em></a> by Jenny Bryan — free online, written for researchers.</p>
-</section>
-<section id="your-feedback-matters" class="slide level2">
-<h2>Your feedback matters!</h2>
-
-<img data-src="./images/QRCode_data_sharing-session-2026.png" class="quarto-figure quarto-figure-center r-stretch"><p>Link: <a href="https://forms.office.com/e/XMUhLD34Th">https://forms.office.com/e/XMUhLD34Th</a></p>
-</section>
-<section id="any-question" class="slide level2 center" style="text-align: center;" data-background-image="/images/just_science_done_right.png" data-background-position="top right" data-background-repeat="no-repeat" data-background-size="15%">
-<h2>Any question?</h2>
-<div style="text-align: center; margin-top: 1em">
-<p>Simone Sacchi</p>
-<p>Research Data Librarian, EUI Library</p>
-<p><a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a></p>
-<p><a href="mailto:resdata@eui.eu">resdata@eui.eu</a></p>
-<p>(Also Teams and BF-278)</p>
-<p><a href="https://eui.libguides.com/research-data-guide" data-preview-link="true"><strong>EUI Library Research Data Guide</strong></a> - <a href="https://www.eui.eu/events?u=lib" data-preview-link="true"><strong>EUI Library Trainings</strong></a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/eui_view.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</section>
-<section id="end-of-the-presentation" class="slide level2 center" style="text-align: center;">
-<h2>End of the presentation</h2>
-</section>
-<section id="backup-slides" class="slide level2 center" style="text-align: center;">
-<h2>BACKUP SLIDES</h2>
-
-</section></section>
+<img data-src="images/merge.png" class="r-stretch quarto-figure-center"><p class="caption">Three documents. On the left are the two modified documents from the previous slide. On the right is a single that incorporates both of those changes</p></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/EUI_logo.png" class="slide-logo"></p>
