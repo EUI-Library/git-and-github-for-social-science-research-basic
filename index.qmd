@@ -1,11 +1,11 @@
 ---
 title: '<br/>Git and GitHub for Social Science Research'
 subtitle: 'Basic level'
-author: <strong>Mathieu Dubiet</strong>, <strong>Simone Sacchi</strong><br /><a href="mailto:mathieu.dubiet@eui.eu">mathieu.dubiet@eui.eu</a>, <a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a>
+author: <strong>Mathieu Dubiet</strong> | <strong>Simone Sacchi</strong><br /><a href="mailto:mathieu.dubiet@eui.eu">mathieu.dubiet@eui.eu</a> | <a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a>
 title-slide-attributes:
   data-background-image: 'images/EUI-logo-acronym.svg'
-  data-background-size: '10%'
-  data-background-position: top 5% center
+  data-background-size: '20%'
+  data-background-position: top 10% center
   data-background-repeat: no-repeat
 format:
   revealjs:
@@ -26,10 +26,20 @@ format:
 
 # Before we start {style="text-align: center;" .center}
 
-## Any knowledge already?
+## Any knowledge yet?
 
 * How many of you are already familiar with Git/GitHub and/or other so called "version control" systems?
 * How many of you have already installed Git on your computer?
+
+## Agenda for today
+
+* Introduction
+* Setting up the environment
+* Your first (or maybe not?) repository
+* The git (and GitHub) workflow to track changes
+* Looking at the history of your changes and what "undo" means
+
+# Introduction {style="text-align: center;" .center}
 
 ## Learning objetives
 
@@ -81,7 +91,7 @@ Version control is like a 'recording' of history
 
 ...Rewind and play changes back again!
 
-## Why Should Social Scientists Care? {.smaller}
+## Why should researchers care? {.smaller}
 
 <br />
 
@@ -109,17 +119,18 @@ What about:
 - `Dropbox`? 
 - (etc. etc.)
 
-**They do provide a "history of changes"!**
+**They do provide a "history of changes", so what?**
 
 ## Advantages
 
 - **Intentional history** — every saved version has a message explaining why it changed, not just when
-- **Real collaboration** — branching and merging let multiple people work in parallel without overwriting each other
 - **Works on anything** — code, data, config files, and integrates with automation tools far beyond what a document editor supports
+- **Real collaboration** — branching and merging let multiple people work in parallel without overwriting each other
+
 
 # Version control with Git and GitHub {style="text-align: center;" .center}
 
-## What Is Git?
+## What is Git?
 
 Git is a **version control system** — a tool that tracks changes to files over time.
 
@@ -134,20 +145,18 @@ Version control is like an **unlimited ‘undo/redo’**
 Originally built for software — now essential for research.
 :::
 
+## What is GitHub? {.smaller}
 
-
-## What is GitHub {.smaller}
-
-GitHub is a cloud-based platform that allows people to store, manage, and collaborate on "code" projects using `Git`
+GitHub is a cloud-based platform that allows people to store, manage, and collaborate on research projects using `Git`
 
 Core features:
 
-- **Git Hosting**: It hosts Git repositories (projects), which allows developers to track changes to their code over time.
-- **Collaboration**: Multiple developers can work on the same project simultaneously, creating "branches" to test new features without breaking the main, stable code.
-- **Social Coding**: Users can share their public projects, follow others, and contribute to open-source software.
+- **Git Hosting and backup**: It hosts Git repositories (projects), which allows you to be safe and work from multiple computers.
+- **Collaboration**: Multiple researchers can work on the same project simultaneously, creating "branches" to test new features without breaking the main, stable work.
+- **Social Coding**: Users can share their projects openly, follow others, and contribute to building reproducibility and trust in research.
 
 ::: {.callout-tip}
-Read more about GitHub in [GitHub doc](https://docs.github.com/en){data-preview-link="true"}
+Read more about GitHub in [GitHub doc](https://docs.github.com/en){target="_blank"}
 :::
 
 
@@ -162,27 +171,34 @@ Read more about GitHub in [GitHub doc](https://docs.github.com/en){data-preview-
 <br/>
 
 ::: {.callout-note appearance="minimal"}
-Other platforms: **GitLab**, **Bitbucket** — same Git, different banks.
+Other platforms: [GitLab](https://about.gitlab.com/){target="_blank"}, [Bitbucket](https://bitbucket.org/){target="_blank"} — same Git, different banks.
 :::
 
-# Let's start with Git and GitHib {style="text-align: center;" .center}
-
-(and create a Git repository)
+# Let's create a repository with Git and GitHub {style="text-align: center;" .center}
 
 ## Prerequisites:
 
-1. Download and install Git from the [Git website](https://git-scm.com/install/){data-preview-link="true"}
-2. Create a GitHub account on [GitHub](https://github.com/signup){data-preview-link="true"}
-3. Download and install [GitHub Desktop](https://github.com/signup){data-preview-link="true"}
+1. Download and install Git from the [Git website](https://git-scm.com/install/){target="_blank"}
+2. Create a GitHub account on [GitHub](https://github.com/signup){target="_blank"}
+3. Download and install [GitHub Desktop](https://github.com/signup){target="_blank"}
+4. Configure Git [[Using GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop){data-preview-link="true"} or command line] (only the first time)
 
-## Steps to start a project
+::: {.callout-note appearance="minimal"}
+If you work with `VS Code` or `R Studio` we will set them up later
+:::
 
-1. Configure Git [[Using GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop){data-preview-link="true"} or command line]
-2. Create a folder (on your laptop)
-3. Init a repository within the folder
-4. Create/add your first file
+## Start a project using Git
 
-## Starting a Project in GitHub Desktop {.smaller}
+1. Create a folder (on your computer)
+2. Init a local repository within the folder
+3. Create/add your first file
+4. Now on, Git will monitor the folder for changes
+
+::: {.callout-tip}
+So far, your Git repository lives **only locally** on your computer
+:::
+
+## Start a project using GitHub Desktop {.smaller}
 
 **Option A — New local project:**
 
@@ -194,56 +210,47 @@ Other platforms: **GitLab**, **Bitbucket** — same Git, different banks.
 **Option B — Clone an existing repo:**
 
 1. `File` → `Clone Repository`
-2. Browse your GitHub repos or paste a URL
+2. Browse your GitHub repos or paste a URL (e.g. our demo repo: [add demo URL])
 3. Choose a local folder → **Clone**
 
-::: {.callout-note appearance="minimal"}
-The repo now lives both on GitHub and on your computer.
+::: {.callout-tip}
+The repository now lives both **on your computer** and on **GitHub**
 :::
 
-## Core Concepts: The Three Areas
+# Let's do it together {style="text-align: center;" .center}
+
+# Track changes {style="text-align: center;" .center}
+
+## Core concepts: the three areas
 
 <br />
-::: {.r-fit-text}
+
+::: {.r-fit-text }
+
 ```
 Working Directory  →  Staging Area  →  Repository
-   (your files)       (selected         (permanent
-                        changes)         history)
+   (your files)       (selected)        (permanent)
 ```
+
 :::
 
-
-<br />
+<br/>
 
 Think of it like writing a paper:
 
 - **Working Directory** → your working draft
 - **Staging Area** → pages you've selected to submit
-- **Repository** → the final, archived version
+- **Repository** → the final, submitted version (that you can still revise!)
 
-## Your First Git Commands
+## Git workflow (with remote repository) {.smaller}
 
-Configure `git` from the command-line, here's how:
+<a title="Lbhtw, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git_data_flow.png"><img alt="Git data flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Git_data_flow.png/960px-Git_data_flow.png" width="50%"></a>
 
-```bash
-# Set up once on your machine
-git config --global user.name "Ada Lovelace"
-git config --global user.email "ada@research.ac"
+::: {.callout-tip}
+Commits are your research diary — make them meaningful. The complete history of **commits** and metadata is a **repository**
+:::
 
-# Start tracking a project
-git init
-
-# See what has changed
-git status
-
-# Stage a file
-git add analysis.R
-
-# Save a snapshot with a message
-git commit -m "Add baseline regression model"
-```
-
-## The Commit: Heart of Git {.smaller}
+## The commit: heart of Git {.smaller}
 
 A **commit** is a permanent snapshot of your project with:
 
@@ -270,16 +277,18 @@ What is likely to happen…
 ❌ "asdfgh"
 ```
 
-## What to Track (and What Not to Track)
+## What to track (and what NOT to track){.smaller}
 
 **✅ Track these:**
+
 - R, Python, Stata scripts (`.R`, `.py`, `.do`)
 - Quarto / RMarkdown files (`.qmd`, `.Rmd`)
-- Small, raw data files (with permission)
+- (Small) raw data files (with permission)
 - Documentation and codebooks
 
 **❌ Do not track these (use `.gitignore`):**
-- Large datasets (use OSF, Zenodo, or Dataverse)
+
+- Large datasets (use a Data Repository)
 - Sensitive / personally identifiable data
 - Temporary files (`.Rhistory`, `__pycache__`)
 - Output files that can be regenerated
@@ -297,67 +306,76 @@ What is likely to happen…
   * It tells `git` to ignore specified files/directories
   * It should be committed in your repository
 
-## Git and Open Science
+# Let's do it together {style="text-align: center;" .center}
+
+# Check the history of our work {style="text-align: center;" .center}
+
+## Understanding Commit History {.smaller}
+Your project's history is a sequence of commits, each identified by a unique hash — a long alphanumeric string like `a3f92bc`. 
+
+Each commit records:
+
+- Which files changed and exactly what changed in each file
+- Who made the commit (name and email)
+- When it was committed
+- The commit message describing the change
+- A pointer to the previous commit (parent)
+
+::: {.callout-tip}
+This **chain of commits** is what makes Git a reliable audit trail — equivalent to a laboratory notebook for your research.
+:::
+
+## Viewing history (and undo changes)
+
+You can check the history of your work:
+
+- In GitHub Desktop
+- In VS Code
+- In R Studio
+- On GitHub (web browser)
+- Using the command line
+
+# Let's do it together {style="text-align: center;" .center}
+
+# Wrap up and takeaways {style="text-align: center;" .center}
+
+## Key Takeaways {.smaller}
+
+
+1. **Commit often** — small, meaningful snapshots
+2. **Write good messages** — future you will thank you
+3. **Push to GitHub** — backup, collaboration, transparency
+4. **Use `.gitignore`** — keep sensitive data out
+5. **Branch freely** — experiment without fear (next training session!)
+
+::: {.callout-tip}
+**Git gives your research a memory.**
+:::
+
+## Seriously, `git push` when done…
+
+![A sign: In case of fire 1. git commit, 2. git push, 3. leave building](images/git_fire_notice.jpg){.r-stretch}
+
+
+## Git, reproducibility and Open Science
 
 Git + GitHub enables powerful open science practices:
 
 - **Persistent links** to exact code used in a paper
 - **Tags and releases** to mark submission versions
-- **Zenodo integration** — auto-DOI for every release
-- **Pre-registration companion** — commit your analysis plan before data collection
-- **Issue tracker** — structured feedback from reviewers or collaborators
+- **GitHub/Zenodo integration** — auto-DOI for every release
+- **GitHub Issue tracker** — structured feedback from reviewers or collaborators
 
 ::: {.callout-tip}
-A public GitHub repo is increasingly expected at submission.
+A public GitHub repository is increasingly expected at submission.
 :::
-
-
-## Multiple contributors (branching)
-
-* Two people work on a document
-  * Each makes independent changes: two versions
-
-![Three documents. On the left is the original, and on the right are two versions of this with different, and conflicting, changes](images/versions.png)
-
-* Changes are separate from the document
-
-
-## Combining changes (merging)
-
-* Several changes can be merged onto the same base document
-  * 'Merging'
-
-![Three documents. On the left are the two modified documents from the previous slide. On the right is a single that incorporates both of those changes](images/merge.png)
-
-## Seriously, `git push` when done…
-
-![A sign: In case of fire 1. git commit, 2. git push, 3. leave building](images/git_fire_notice.jpg)
-
-
-## Key Takeaways
-
-**Git gives your research a memory.**
-
-1. **Commit often** — small, meaningful snapshots
-2. **Write good messages** — future you will thank you
-3. **Branch freely** — experiment without fear
-4. **Push to GitHub** — backup, collaboration, transparency
-5. **Use `.gitignore`** — keep sensitive data out
-
-::: {.callout-tip}
-**Git gives your research a memory.**
-:::
-
-
-## Essential resources
-[*Happy Git and GitHub for the useR*](https://happygitwithr.com/) by Jenny Bryan — free online, written for researchers.
 
 
 ## Your feedback matters! 
 
-![](/images/QRCode_data_sharing-session-2026.png){fig-align="center"}
+![](/images/QRCode%20for%20Git%20and%20GitHub%20for%20Social%20Science%20Research_%20basic%20level.png){fig-align="center"}
 
-Link: [https://forms.office.com/e/XMUhLD34Th](https://forms.office.com/e/XMUhLD34Th)
+Link: [https://forms.cloud.microsoft/e/dZwq7DAWPE](https://forms.cloud.microsoft/e/dZwq7DAWPE)
 
 
 ## Any question? {style="text-align: center;" .center background-image="/images/just_science_done_right.png" background-position="top right" background-repeat="no-repeat" background-size="15%"}
@@ -378,6 +396,49 @@ Research Data Librarian, EUI Library
 ![](/images/eui_view.png){fig-align="center"}
 :::
 
+## Essential resources
+[*Happy Git and GitHub for the useR*](https://happygitwithr.com/) by Jenny Bryan — free online, written for researchers.
+
+
 ## End of the presentation {style="text-align: center;" .center}
 
 ## BACKUP SLIDES {style="text-align: center;" .center}
+
+## Your First Git Commands
+
+Configure `git` from the command-line, here's how:
+
+```bash
+# Set up once on your machine
+git config --global user.name "Ada Lovelace"
+git config --global user.email "ada@research.ac"
+
+# Start tracking a project
+git init
+
+# See what has changed
+git status
+
+# Stage a file
+git add analysis.R
+
+# Save a snapshot with a message
+git commit -m "Add baseline regression model"
+```
+
+## Multiple contributors (branching)
+
+* Two people work on a document
+  * Each makes independent changes: two versions
+
+![Three documents. On the left is the original, and on the right are two versions of this with different, and conflicting, changes](images/versions.png)
+
+* Changes are separate from the document
+
+
+## Combining changes (merging)
+
+* Several changes can be merged onto the same base document
+  * 'Merging'
+
+![Three documents. On the left are the two modified documents from the previous slide. On the right is a single that incorporates both of those changes](images/merge.png)
