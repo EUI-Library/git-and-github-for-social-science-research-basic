@@ -1,7 +1,7 @@
 ---
 title: '<br/>Git and GitHub for Social Science Research'
 subtitle: 'Basic level'
-author: <strong>Mathieu Dubiet</strong> | <strong>Simone Sacchi</strong><br /><a href="mailto:mathieu.dubiet@eui.eu">mathieu.dubiet@eui.eu</a> | <a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a>
+author: <strong>Mathieu Dubied</strong> | <strong>Simone Sacchi</strong><br /><a href="mailto:mathieu.dubied@eui.eu">mathieu.dubied@eui.eu</a> | <a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a>
 title-slide-attributes:
   data-background-image: 'images/EUI-logo-acronym.svg'
   data-background-size: '20%'
