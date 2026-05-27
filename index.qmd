@@ -110,7 +110,18 @@ Version control is like a 'recording' of history
 Git is a core infrastructure for [**reproducible research**](https://book.the-turing-way.org/){data-preview-link="true"}
 :::
 
-## Now you might wonder...
+
+## Advantages...
+
+- **Intentional history** — every saved version has a message explaining why it changed, not just when
+- **Works on anything** — code, data, config files, and integrates with automation tools far beyond what a document editor supports
+- **Real collaboration** — branching and merging let multiple people work in parallel without overwriting each other
+
+## ...and disadvantages
+
+TBD
+
+## You may also wonder...
 
 What about: 
 
@@ -120,12 +131,6 @@ What about:
 - (etc. etc.)
 
 **They do provide a "history of changes", so what?**
-
-## Advantages
-
-- **Intentional history** — every saved version has a message explaining why it changed, not just when
-- **Works on anything** — code, data, config files, and integrates with automation tools far beyond what a document editor supports
-- **Real collaboration** — branching and merging let multiple people work in parallel without overwriting each other
 
 
 # Version control with Git and GitHub {style="text-align: center;" .center}
