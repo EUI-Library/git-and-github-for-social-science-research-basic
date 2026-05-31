@@ -458,43 +458,32 @@ my_analysis_THIS_ONE.R</code></pre>
 </div>
 </div>
 </section>
-<section id="start-a-project-using-git" class="slide level2">
-<h2>Start a project using Git</h2>
-<ol type="1">
-<li>Create a folder (on your computer)</li>
-<li>Init a local repository within the folder</li>
-<li>Create/add your first file</li>
-<li>Now on, Git will monitor the folder for changes</li>
-</ol>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>So far, your Git repository lives <strong>only locally</strong> on your computer</p>
-</div>
-</div>
-</div>
+<section id="download-clone-a-project-repository-using-github" class="slide level2">
+<h2>Download (=clone) a project (=repository) using GitHub</h2>
+<p>** GitHub as a way to share data and code * Who have seen/used GitHub online repositories? * In addition to the files it contains, what else can we see?</p>
+<p>** Create a local copy (=a clone) of the online (=remote) repository 1. <code>File</code> → <code>Clone repository ...</code> 2. Pick <code>URL</code> and paste <code>https://github.com/mdubied/tutorial-repo.git</code> 3. Choose a local path on your computer where you want to store the repository</p>
+<ul>
+<li>What elements does your local folder contain?</li>
+</ul>
+<!--
+## Start you own project using Git
+1. Create a folder (on your computer)
+2. Init a local repository within the folder
+3. Create/add your first file
+4. Now on, Git will monitor the folder for changes
+::: {.callout-tip}
+So far, your Git repository lives **only locally** on your computer
+:::
+-->
 </section>
-<section id="start-a-project-using-github-desktop" class="slide level2 smaller">
-<h2>Start a project using GitHub Desktop</h2>
-<p><strong>Option A — New local project:</strong></p>
+<section id="start-your-project-using-github-desktop" class="slide level2 smaller">
+<h2>Start your project using GitHub Desktop</h2>
 <ol type="1">
 <li><code>File</code> → <code>New Repository</code></li>
-<li>Give it a name, choose a folder, tick <em>Initialize with README</em></li>
+<li>Give it a name (<code>tutorial-your-name</code>), choose a folder, tick <em>Initialize with README</em></li>
 <li>Click <strong>Create Repository</strong></li>
 <li>Click <strong>Publish repository</strong> to push it to GitHub</li>
 </ol>
-<p><strong>Option B — Clone an existing repo:</strong></p>
-<ol type="1">
-<li><code>File</code> → <code>Clone Repository</code></li>
-<li>Browse your GitHub repos or paste a URL (e.g.&nbsp;our demo repo: [add demo URL])</li>
-<li>Choose a local folder → <strong>Clone</strong></li>
-</ol>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -504,27 +493,43 @@ my_analysis_THIS_ONE.R</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>The repository now lives both <strong>on your computer</strong> and on <strong>GitHub</strong></p>
+<p>The repository now lives both <strong>on your computer</strong> and on <strong>GitHub</strong>. It is private and no one else can see it for the moment.</p>
 </div>
 </div>
 </div>
-</section></section>
-<section id="lets-do-it-together" class="title-slide slide level1 center" style="text-align: center;">
-<h1>Let’s do it together</h1>
-
 </section>
-
+<section id="some-more-information" class="slide level2">
+<h2>Some more information</h2>
+<ul>
+<li>Description: will appear on the GitHub website, can be changed later</li>
+<li>README: describes the project structure and how to use it, can be added and changed later</li>
+<li>Git ignore: files that GitHub should not track. If you code in a specific language, choose this language in the list</li>
+<li>License: useful when you make your code public (typically MIT license for academia)</li>
+</ul>
+</section></section>
 <section>
 <section id="track-changes" class="title-slide slide level1 center" style="text-align: center;">
 <h1>Track changes</h1>
 
 </section>
+<section id="make-and-track-changes" class="slide level2">
+<h2>Make and track changes</h2>
+<p>Try the following</p>
+<ol type="1">
+<li>Add the files from the repository you cloned (<code>tutorial-repo</code>) to your own repository</li>
+<li>See how GitHub Desktop reacts</li>
+<li>Add a summary and record (=commit) your changes</li>
+<li>Upload (=push) your commit to the online repository</li>
+<li>Change the file <code>comment_sample</code> and see how GitHub Desktop reacts</li>
+<li>Commit and push</li>
+</ol>
+</section>
 <section id="core-concepts-the-three-areas" class="slide level2">
 <h2>Core concepts: the three areas</h2>
 <p><br></p>
 <div class="r-fit-text">
-<pre><code>Working Directory  →  Staging Area  →  Repository
-   (your files)       (selected)        (permanent)</code></pre>
+<pre><code>Working Directory  →  Staging Area         →    Repository
+   (your files)       (selected changes)        (permanent snapshot)</code></pre>
 </div>
 <p><br></p>
 <p>Think of it like writing a paper:</p>
@@ -533,23 +538,6 @@ my_analysis_THIS_ONE.R</code></pre>
 <li><strong>Staging Area</strong> → pages you’ve selected to submit</li>
 <li><strong>Repository</strong> → the final, submitted version (that you can still revise!)</li>
 </ul>
-</section>
-<section id="git-workflow-with-remote-repository" class="slide level2 smaller">
-<h2>Git workflow (with remote repository)</h2>
-<p><a title="Lbhtw, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git_data_flow.png"><img alt="Git data flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Git_data_flow.png/960px-Git_data_flow.png" width="50%"></a></p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>Commits are your research diary — make them meaningful. The complete history of <strong>commits</strong> and metadata is a <strong>repository</strong></p>
-</div>
-</div>
-</div>
 </section>
 <section id="the-commit-heart-of-git" class="slide level2 smaller">
 <h2>The commit: heart of Git</h2>
@@ -589,6 +577,17 @@ my_analysis_THIS_ONE.R</code></pre>
 ❌ "fixed stuff"
 ❌ "asdfgh"</code></pre>
 </section>
+<section id="make-and-track-changes-in-code" class="slide level2">
+<h2>Make and track changes in code</h2>
+<p>Try the following</p>
+<ol type="1">
+<li><p>Open <code>analysis.R</code> file</p></li>
+<li><p>Remove one variable from the regression model</p></li>
+<li><p>See how GitHub Desktop reacts, commit and push</p></li>
+<li><p>Ask Claude code/ChatGPT to create a new model</p></li>
+<li><p>See how GitHub Desktop reacts, commit and push</p></li>
+</ol>
+</section>
 <section id="what-to-track-and-what-not-to-track" class="slide level2 smaller">
 <h2>What to track (and what NOT to track)</h2>
 <p><strong>✅ Track these:</strong></p>
@@ -624,12 +623,16 @@ my_analysis_THIS_ONE.R</code></pre>
 <li>It should be committed in your repository</li>
 </ul></li>
 </ul>
-</section></section>
-<section id="lets-do-it-together-1" class="title-slide slide level1 center" style="text-align: center;">
-<h1>Let’s do it together</h1>
-
 </section>
-
+<section id="example-do-not-track-sensible-or-large-data" class="slide level2">
+<h2>Example: do not track sensible or large data</h2>
+<ol type="1">
+<li>Create a folder <code>sensitive_data</code></li>
+<li>Add a csv file or anything else inside</li>
+<li>Add <code>sentitive_data/</code> to the <code>.gitignore</code>.</li>
+<li>See how GitHub Desktop reacts</li>
+</ol>
+</section></section>
 <section>
 <section id="check-the-history-of-our-work" class="title-slide slide level1 center" style="text-align: center;">
 <h1>Check the history of our work</h1>
@@ -671,9 +674,10 @@ my_analysis_THIS_ONE.R</code></pre>
 <li>Using the command line</li>
 </ul>
 </section></section>
-<section id="lets-do-it-together-2" class="title-slide slide level1 center" style="text-align: center;">
-<h1>Let’s do it together</h1>
-
+<section id="integration-in-rstudio-and-vscode" class="title-slide slide level1 center">
+<h1>Integration in RStudio and VSCode</h1>
+<p>Git/GitHub can also directly be used in RStudio or VSCode, instead of GitHub Desktop.</p>
+<p>Install the corresponding extensions for this.</p>
 </section>
 
 <section>
