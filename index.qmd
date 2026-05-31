@@ -192,39 +192,60 @@ Other platforms: [GitLab](https://about.gitlab.com/){target="_blank"}, [Bitbucke
 If you work with `VS Code` or `R Studio` we will set them up later
 :::
 
-## Start a project using Git
+## Download (=clone) a project (=repository) using GitHub
 
+** GitHub as a way to share data and code
+* Who have seen/used GitHub online repositories?
+* In addition to the files it contains, what else can we see?
+
+** Create a local copy (=a clone) of the online (=remote) repository
+1. `File` → `Clone repository ...`
+2. Pick `URL` and paste `https://github.com/mdubied/tutorial-repo.git`
+3. Choose a local path on your computer where you want to store the repository
+
+* What elements does your local folder contain?
+
+<!--
+## Start you own project using Git
 1. Create a folder (on your computer)
 2. Init a local repository within the folder
 3. Create/add your first file
 4. Now on, Git will monitor the folder for changes
-
 ::: {.callout-tip}
 So far, your Git repository lives **only locally** on your computer
 :::
+-->
 
-## Start a project using GitHub Desktop {.smaller}
-
-**Option A — New local project:**
+## Start your project using GitHub Desktop {.smaller}
 
 1. `File` → `New Repository`
-2. Give it a name, choose a folder, tick *Initialize with README*
+2. Give it a name (`tutorial-your-name`), choose a folder, tick *Initialize with README*
 3. Click **Create Repository**
 4. Click **Publish repository** to push it to GitHub
 
-**Option B — Clone an existing repo:**
-
-1. `File` → `Clone Repository`
-2. Browse your GitHub repos or paste a URL (e.g. our demo repo: [add demo URL])
-3. Choose a local folder → **Clone**
-
 ::: {.callout-tip}
-The repository now lives both **on your computer** and on **GitHub**
+The repository now lives both **on your computer** and on **GitHub**. It is private and no one else can see it for the moment.
 :::
 
-# Let's do it together {style="text-align: center;" .center}
+## Some more information
+
+* Description: will appear on the GitHub website, can be changed later
+* README: describes the project structure and how to use it, can be added and changed later
+* Git ignore: files that GitHub should not track. If you code in a specific language, choose this language in the list
+* License: useful when you make your code public (typically MIT license for academia)
 
 # Track changes {style="text-align: center;" .center}
+
+## Make and track changes
+
+Try the following
+
+1. Add the files from the repository you cloned (`tutorial-repo`) to your own repository
+2. See how GitHub Desktop reacts
+3. Add a summary and record (=commit) your changes 
+4. Upload (=push) your commit to the online repository
+5. Change the file `comment_sample` and see how GitHub Desktop reacts
+6. Commit and push
 
 ## Core concepts: the three areas
 
@@ -233,8 +254,8 @@ The repository now lives both **on your computer** and on **GitHub**
 ::: {.r-fit-text }
 
 ```
-Working Directory  →  Staging Area  →  Repository
-   (your files)       (selected)        (permanent)
+Working Directory  →  Staging Area         →    Repository
+   (your files)       (selected changes)        (permanent snapshot)
 ```
 
 :::
@@ -246,14 +267,6 @@ Think of it like writing a paper:
 - **Working Directory** → your working draft
 - **Staging Area** → pages you've selected to submit
 - **Repository** → the final, submitted version (that you can still revise!)
-
-## Git workflow (with remote repository) {.smaller}
-
-<a title="Lbhtw, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git_data_flow.png"><img alt="Git data flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Git_data_flow.png/960px-Git_data_flow.png" width="50%"></a>
-
-::: {.callout-tip}
-Commits are your research diary — make them meaningful. The complete history of **commits** and metadata is a **repository**
-:::
 
 ## The commit: heart of Git {.smaller}
 
@@ -281,6 +294,17 @@ What is likely to happen…
 ❌ "fixed stuff"
 ❌ "asdfgh"
 ```
+
+## Make and track changes in code
+
+Try the following
+
+1. Open `analysis.R` file
+2. Remove one variable from the regression model
+3. See how GitHub Desktop reacts, commit and push
+
+4. Ask Claude code/ChatGPT to create a new model
+5. See how GitHub Desktop reacts, commit and push
 
 ## What to track (and what NOT to track){.smaller}
 
@@ -311,7 +335,12 @@ What is likely to happen…
   * It tells `git` to ignore specified files/directories
   * It should be committed in your repository
 
-# Let's do it together {style="text-align: center;" .center}
+## Example: do not track sensible or large data
+
+1. Create a folder `sensitive_data`
+2. Add a csv file or anything else inside
+3. Add `sentitive_data/` to the `.gitignore`. 
+4. See how GitHub Desktop reacts
 
 # Check the history of our work {style="text-align: center;" .center}
 
@@ -340,7 +369,11 @@ You can check the history of your work:
 - On GitHub (web browser)
 - Using the command line
 
-# Let's do it together {style="text-align: center;" .center}
+# Integration in RStudio and VSCode
+
+Git/GitHub can also directly be used in RStudio or VSCode, instead of GitHub Desktop. 
+
+Install the corresponding extensions for this.
 
 # Wrap up and takeaways {style="text-align: center;" .center}
 
