@@ -74,7 +74,7 @@ my_analysis_THIS_ONE.R
 :::
 :::
 
-## The solution: version control
+## A solution: version control
 
 * We can record who made which changes, and when
 * We can revert to previous versions
@@ -236,6 +236,7 @@ The repository now lives both **on your computer** and on **GitHub**. It is priv
 
 # Track changes {style="text-align: center;" .center}
 
+<<<<<<< HEAD
 ## Make and track changes
 
 Try the following
@@ -248,6 +249,9 @@ Try the following
 6. Commit and push
 
 ## Core concepts: the three areas
+=======
+## Core concepts: the three areas {.smaller}
+>>>>>>> 432ed69 (Removed confudsing workflow slide, small slide titles refactor)
 
 <br />
 
@@ -260,14 +264,26 @@ Working Directory  →  Staging Area         →    Repository
 
 :::
 
-<br/>
-
 Think of it like writing a paper:
 
 - **Working Directory** → your working draft
 - **Staging Area** → pages you've selected to submit
 - **Repository** → the final, submitted version (that you can still revise!)
 
+<<<<<<< HEAD
+=======
+::: {.callout-tip}
+Commits are your research diary — make them meaningful. The complete history of **commits** and metadata is a **repository**
+:::
+
+<!--
+## Git workflow (with remote repository) {.smaller}
+
+<a title="Lbhtw, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git_data_flow.png"><img alt="Git data flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Git_data_flow.png/960px-Git_data_flow.png" width="50%"></a>
+
+-->
+
+>>>>>>> 432ed69 (Removed confudsing workflow slide, small slide titles refactor)
 ## The commit: heart of Git {.smaller}
 
 A **commit** is a permanent snapshot of your project with:
