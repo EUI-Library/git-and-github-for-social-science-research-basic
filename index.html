@@ -458,10 +458,19 @@ my_analysis_THIS_ONE.R</code></pre>
 </div>
 </div>
 </section>
-<section id="download-clone-a-project-repository-using-github" class="slide level2">
+<section id="download-clone-a-project-repository-using-github" class="slide level2 smaller">
 <h2>Download (=clone) a project (=repository) using GitHub</h2>
-<p>** GitHub as a way to share data and code * Who have seen/used GitHub online repositories? * In addition to the files it contains, what else can we see?</p>
-<p>** Create a local copy (=a clone) of the online (=remote) repository 1. <code>File</code> → <code>Clone repository ...</code> 2. Pick <code>URL</code> and paste <code>https://github.com/mdubied/tutorial-repo.git</code> 3. Choose a local path on your computer where you want to store the repository</p>
+<p><strong>GitHub as a way to share data and code</strong></p>
+<ul>
+<li>Who have seen/used GitHub online repositories?</li>
+<li>In addition to the files it contains, what else can we see?</li>
+</ul>
+<p><strong>Create a local copy (=a clone) of the online (=remote) repository</strong></p>
+<ol type="1">
+<li><code>File</code> → <code>Clone repository ...</code></li>
+<li>Pick <code>URL</code> and paste <code>https://github.com/mdubied/tutorial-repo.git</code></li>
+<li>Choose a local path on your computer where you want to store the repository</li>
+</ol>
 <ul>
 <li>What elements does your local folder contain?</li>
 </ul>
@@ -501,16 +510,20 @@ So far, your Git repository lives **only locally** on your computer
 <section id="some-more-information" class="slide level2">
 <h2>Some more information</h2>
 <ul>
-<li>Description: will appear on the GitHub website, can be changed later</li>
-<li>README: describes the project structure and how to use it, can be added and changed later</li>
-<li>Git ignore: files that GitHub should not track. If you code in a specific language, choose this language in the list</li>
-<li>License: useful when you make your code public (typically MIT license for academia)</li>
+<li><strong>Description</strong>: will appear on the GitHub website, can be changed later</li>
+<li><strong>README</strong>: describes the project structure and how to use it, can be added and changed later</li>
+<li><strong>Git ignore</strong>: files that GitHub should not track. If you code in a specific language, choose this language in the list</li>
+<li><strong>License</strong>: useful when you make your code public (typically MIT license for academia)</li>
 </ul>
 </section></section>
+<section>
 <section id="track-changes" class="title-slide slide level1 center" style="text-align: center;">
 <h1>Track changes</h1>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Make and track changes</p>
-<p>Try the following</p>
+
+</section>
+<section id="make-and-track-changes" class="slide level2">
+<h2>Make and track changes</h2>
+<p>Try the following:</p>
 <ol type="1">
 <li>Add the files from the repository you cloned (<code>tutorial-repo</code>) to your own repository</li>
 <li>See how GitHub Desktop reacts</li>
@@ -520,29 +533,8 @@ So far, your Git repository lives **only locally** on your computer
 <li>Commit and push</li>
 </ol>
 </section>
-
-<section>
-<section id="core-concepts-the-three-areas" class="title-slide slide level1 center">
-<h1>## Core concepts: the three areas</h1>
-
-</section>
-<section id="core-concepts-the-three-areas-1" class="slide level2 smaller">
+<section id="core-concepts-the-three-areas" class="slide level2 smaller">
 <h2>Core concepts: the three areas</h2>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>432ed69 (Removed confudsing workflow slide, small slide titles refactor)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 <p><br></p>
 <div class="r-fit-text">
 <pre><code>Working Directory  →  Staging Area         →    Repository
@@ -554,44 +546,9 @@ So far, your Git repository lives **only locally** on your computer
 <li><strong>Staging Area</strong> → pages you’ve selected to submit</li>
 <li><strong>Repository</strong> → the final, submitted version (that you can still revise!)</li>
 </ul>
-</section></section>
-<section>
-<section id="head" class="title-slide slide level1 center">
-<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>Commits are your research diary — make them meaningful. The complete history of <strong>commits</strong> and metadata is a <strong>repository</strong></p>
-</div>
-</div>
-</div>
-<!--
-## Git workflow (with remote repository) {.smaller}
-
-<a title="Lbhtw, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git_data_flow.png"><img alt="Git data flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Git_data_flow.png/960px-Git_data_flow.png" width="50%"></a>
-
--->
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>432ed69 (Removed confudsing workflow slide, small slide titles refactor) ## The commit: heart of Git {.smaller}</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+</section>
+<section id="the-commit-heart-of-git" class="slide level2 smaller">
+<h2>The commit: heart of Git</h2>
 <p>A <strong>commit</strong> is a permanent snapshot of your project with:</p>
 <ul>
 <li>A unique ID (hash): <code>a3f92bc</code></li>
@@ -725,7 +682,7 @@ So far, your Git repository lives **only locally** on your computer
 <li>Using the command line</li>
 </ul>
 </section></section>
-<section id="integration-in-rstudio-and-vscode" class="title-slide slide level1 center">
+<section id="integration-in-rstudio-and-vscode" class="title-slide slide level1 center" style="text-align: center;">
 <h1>Integration in RStudio and VSCode</h1>
 <p>Git/GitHub can also directly be used in RStudio or VSCode, instead of GitHub Desktop.</p>
 <p>Install the corresponding extensions for this.</p>
@@ -791,18 +748,16 @@ So far, your Git repository lives **only locally** on your computer
 
 <img data-src="./images/QRCode%20for%20Git%20and%20GitHub%20for%20Social%20Science%20Research_%20basic%20level.png" class="quarto-figure quarto-figure-center r-stretch"><p>Link: <a href="https://forms.cloud.microsoft/e/dZwq7DAWPE">https://forms.cloud.microsoft/e/dZwq7DAWPE</a></p>
 </section>
-<section id="any-question" class="slide level2 center" style="text-align: center;" data-background-image="/images/just_science_done_right.png" data-background-position="top right" data-background-repeat="no-repeat" data-background-size="15%">
+<section id="any-question" class="slide level2 center smaller" style="text-align: center;" data-background-image="/images/just_science_done_right.png" data-background-position="top right" data-background-repeat="no-repeat" data-background-size="15%">
 <h2>Any question?</h2>
 <div style="text-align: center; margin-top: 1em">
 <p>Simone Sacchi</p>
 <p>Research Data Librarian, EUI Library</p>
-<p><a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a></p>
-<p><a href="mailto:resdata@eui.eu">resdata@eui.eu</a></p>
-<p>(Also Teams and BF-278)</p>
+<p><a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a> | <a href="mailto:resdata@eui.eu">resdata@eui.eu</a></p>
 <p><a href="https://eui.libguides.com/research-data-guide" data-preview-link="true"><strong>EUI Library Research Data Guide</strong></a> - <a href="https://www.eui.eu/events?u=lib" data-preview-link="true"><strong>EUI Library Trainings</strong></a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="./images/eui_view.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="./images/eui_view.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
