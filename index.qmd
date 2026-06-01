@@ -192,13 +192,15 @@ Other platforms: [GitLab](https://about.gitlab.com/){target="_blank"}, [Bitbucke
 If you work with `VS Code` or `R Studio` we will set them up later
 :::
 
-## Download (=clone) a project (=repository) using GitHub
+## Download (=clone) a project (=repository) using GitHub {.smaller}
 
-** GitHub as a way to share data and code
+**GitHub as a way to share data and code**
+
 * Who have seen/used GitHub online repositories?
 * In addition to the files it contains, what else can we see?
 
-** Create a local copy (=a clone) of the online (=remote) repository
+**Create a local copy (=a clone) of the online (=remote) repository**
+
 1. `File` → `Clone repository ...`
 2. Pick `URL` and paste `https://github.com/mdubied/tutorial-repo.git`
 3. Choose a local path on your computer where you want to store the repository
@@ -229,17 +231,16 @@ The repository now lives both **on your computer** and on **GitHub**. It is priv
 
 ## Some more information
 
-* Description: will appear on the GitHub website, can be changed later
-* README: describes the project structure and how to use it, can be added and changed later
-* Git ignore: files that GitHub should not track. If you code in a specific language, choose this language in the list
-* License: useful when you make your code public (typically MIT license for academia)
+* **Description**: will appear on the GitHub website, can be changed later
+* **README**: describes the project structure and how to use it, can be added and changed later
+* **Git ignore**: files that GitHub should not track. If you code in a specific language, choose this language in the list
+* **License**: useful when you make your code public (typically MIT license for academia)
 
 # Track changes {style="text-align: center;" .center}
 
-<<<<<<< HEAD
 ## Make and track changes
 
-Try the following
+Try the following:
 
 1. Add the files from the repository you cloned (`tutorial-repo`) to your own repository
 2. See how GitHub Desktop reacts
@@ -248,10 +249,7 @@ Try the following
 5. Change the file `comment_sample` and see how GitHub Desktop reacts
 6. Commit and push
 
-## Core concepts: the three areas
-=======
 ## Core concepts: the three areas {.smaller}
->>>>>>> 432ed69 (Removed confudsing workflow slide, small slide titles refactor)
 
 <br />
 
@@ -270,20 +268,6 @@ Think of it like writing a paper:
 - **Staging Area** → pages you've selected to submit
 - **Repository** → the final, submitted version (that you can still revise!)
 
-<<<<<<< HEAD
-=======
-::: {.callout-tip}
-Commits are your research diary — make them meaningful. The complete history of **commits** and metadata is a **repository**
-:::
-
-<!--
-## Git workflow (with remote repository) {.smaller}
-
-<a title="Lbhtw, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git_data_flow.png"><img alt="Git data flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Git_data_flow.png/960px-Git_data_flow.png" width="50%"></a>
-
--->
-
->>>>>>> 432ed69 (Removed confudsing workflow slide, small slide titles refactor)
 ## The commit: heart of Git {.smaller}
 
 A **commit** is a permanent snapshot of your project with:
@@ -385,7 +369,7 @@ You can check the history of your work:
 - On GitHub (web browser)
 - Using the command line
 
-# Integration in RStudio and VSCode
+# Integration in RStudio and VSCode {style="text-align: center;" .center}
 
 Git/GitHub can also directly be used in RStudio or VSCode, instead of GitHub Desktop. 
 
@@ -432,22 +416,18 @@ A public GitHub repository is increasingly expected at submission.
 Link: [https://forms.cloud.microsoft/e/dZwq7DAWPE](https://forms.cloud.microsoft/e/dZwq7DAWPE)
 
 
-## Any question? {style="text-align: center;" .center background-image="/images/just_science_done_right.png" background-position="top right" background-repeat="no-repeat" background-size="15%"}
+## Any question? {style="text-align: center;" .center background-image="/images/just_science_done_right.png" background-position="top right" background-repeat="no-repeat" background-size="15%" .smaller}
 
 ::: {style="text-align: center; margin-top: 1em"}
 Simone Sacchi
 
 Research Data Librarian, EUI Library
 
-[simone.sacchi@eui.eu](mailto:simone.sacchi@eui.eu)
-
-[resdata@eui.eu](mailto:resdata@eui.eu)
-
-(Also Teams and BF-278)
+[simone.sacchi@eui.eu](mailto:simone.sacchi@eui.eu) | [resdata@eui.eu](mailto:resdata@eui.eu)
 
 [**EUI Library Research Data Guide**](https://eui.libguides.com/research-data-guide){data-preview-link="true"} - [**EUI Library Trainings**](https://www.eui.eu/events?u=lib){data-preview-link="true"}
 
-![](/images/eui_view.png){fig-align="center"}
+![](/images/eui_view.png){fig-align="center" width="60%"}
 :::
 
 ## Essential resources
