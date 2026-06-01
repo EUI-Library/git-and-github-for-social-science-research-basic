@@ -117,9 +117,13 @@ Git is a core infrastructure for [**reproducible research**](https://book.the-tu
 - **Works on anything** — code, data, config files, and integrates with automation tools far beyond what a document editor supports
 - **Real collaboration** — branching and merging let multiple people work in parallel without overwriting each other
 
-## ...and disadvantages
+## ...and disadvantages {.smaller}
 
-TBD
+- **Steep learning curve** — Git concepts come from software development and don't map intuitively onto research workflows
+- **Non-optimal fit for common file formats** — Word, Excel, and SPSS/Stata files can't be meaningfully "diffed"
+- **Data privacy risks** — Sensitive survey or interview data can be accidentally exposed
+- **Collaboration culture mismatch** — Academics are used to email and track-changes
+- **Weak institutional incentives** — Few disciplines reward reproducible, version-controlled research
 
 ## You may also wonder...
 
@@ -297,7 +301,7 @@ What is likely to happen…
 
 ## Make and track changes in code
 
-Try the following
+Try the following:
 
 1. Open `analysis.R` file
 2. Remove one variable from the regression model
