@@ -6,24 +6,27 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
 
   <meta name="author" content="Mathieu Dubied | Simone Sacchimathieu.dubied@eui.eu | simone.sacchi@eui.eu">
   <title> Git and GitHub for Social Science Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -98,7 +101,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-4e9b2d2d6113d0437522f0ecd09ddd29.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-529c0b23d011329ff747e9567e27a45f.css">
   <link rel="stylesheet" href="styles.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -205,7 +208,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<strong>Mathieu Dubied</strong> | <strong>Simone Sacchi</strong><br><a href="mailto:mathieu.dubied@eui.eu">mathieu.dubied@eui.eu</a> | <a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a> 
+<strong>Mathieu Dubied</strong> | <strong>Simone Sacchi</strong><br><a href="mailto:mathieu.dubied@eui.eu">mathieu.dubied@eui.eu</a> | <a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a>
 </div>
 </div>
 </div>
@@ -220,7 +223,7 @@
 <h2>Any knowledge yet?</h2>
 <ul>
 <li>How many of you are already familiar with Git/GitHub and/or other so called “version control” systems?</li>
-<li>How many of you have already installed Git on your computer?</li>
+<li>How many of you have already installed GitHub Desktop on your computer?</li>
 </ul>
 </section>
 <section id="agenda-for-today" class="slide level2">
@@ -243,7 +246,7 @@
 <ul>
 <li>Understand the basics of automated version control</li>
 <li>Understand the basics of <code>git</code> and <code>GitHub</code></li>
-<li>Make use of <code>git</code> and <code>GitHub</code> with tools like <code>VS Code</code> and <code>R Studio</code></li>
+<li>Use GitHub Desktop to control the different version of a mock project</li>
 <li>Be introduced on how to apply version control to your research</li>
 </ul>
 </section>
@@ -330,24 +333,6 @@ my_analysis_THIS_ONE.R</code></pre>
 </div>
 </div>
 </div>
-</section>
-<section id="advantages" class="slide level2">
-<h2>Advantages…</h2>
-<ul>
-<li><strong>Intentional history</strong> — every saved version has a message explaining why it changed, not just when</li>
-<li><strong>Works on anything</strong> — code, data, config files, and integrates with automation tools far beyond what a document editor supports</li>
-<li><strong>Real collaboration</strong> — branching and merging let multiple people work in parallel without overwriting each other</li>
-</ul>
-</section>
-<section id="and-disadvantages" class="slide level2 smaller">
-<h2>…and disadvantages</h2>
-<ul>
-<li><strong>Steep learning curve</strong> — Git concepts come from software development and don’t map intuitively onto research workflows</li>
-<li><strong>Non-optimal fit for common file formats</strong> — Word, Excel, and SPSS/Stata files can’t be meaningfully “diffed”</li>
-<li><strong>Data privacy risks</strong> — Sensitive survey or interview data can be accidentally exposed</li>
-<li><strong>Collaboration culture mismatch</strong> — Academics are used to email and track-changes</li>
-<li><strong>Weak institutional incentives</strong> — Few disciplines reward reproducible, version-controlled research</li>
-</ul>
 </section>
 <section id="you-may-also-wonder" class="slide level2">
 <h2>You may also wonder…</h2>
@@ -444,114 +429,23 @@ my_analysis_THIS_ONE.R</code></pre>
 </div>
 </section></section>
 <section>
-<section id="lets-create-a-repository-with-git-and-github" class="title-slide slide level1 center" style="text-align: center;">
-<h1>Let’s create a repository with Git and GitHub</h1>
+<section id="tutorial-block-1-create-your-first-repository" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Tutorial Block 1: create your first repository</h1>
 
 </section>
-<section id="prerequisites" class="slide level2">
-<h2>Prerequisites:</h2>
-<ol type="1">
-<li>Download and install Git from the <a href="https://git-scm.com/install/" target="_blank">Git website</a></li>
-<li>Create a GitHub account on <a href="https://github.com/signup" target="_blank">GitHub</a></li>
-<li>Download and install <a href="https://github.com/signup" target="_blank">GitHub Desktop</a></li>
-<li>Configure Git [<a href="https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop" data-preview-link="true">Using GitHub Desktop</a> or command line] (only the first time)</li>
-</ol>
-<div class="callout callout-note no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p>If you work with <code>VS Code</code> or <code>R Studio</code> we will set them up later</p>
-</div>
-</div>
-</div>
-</section>
-<section id="download-clone-a-project-repository-using-github" class="slide level2 smaller">
-<h2>Download (=clone) a project (=repository) using GitHub</h2>
-<p><strong>GitHub as a way to share data and code</strong></p>
+<section id="summary-block-1" class="slide level2">
+<h2>Summary Block 1</h2>
 <ul>
-<li>Who have seen/used GitHub online repositories?</li>
-<li>In addition to the files it contains, what else can we see?</li>
-</ul>
-<p><strong>Create a local copy (=a clone) of the online (=remote) repository</strong></p>
-<ol type="1">
-<li><code>File</code> → <code>Clone repository ...</code></li>
-<li>Pick <code>URL</code> and paste <code>https://github.com/mdubied/tutorial-repo.git</code></li>
-<li>Choose a local path on your computer where you want to store the repository</li>
-</ol>
-<ul>
-<li>What elements does your local folder contain?</li>
-</ul>
-<!--
-## Start you own project using Git
-1. Create a folder (on your computer)
-2. Init a local repository within the folder
-3. Create/add your first file
-4. Now on, Git will monitor the folder for changes
-::: {.callout-tip}
-So far, your Git repository lives **only locally** on your computer
-:::
--->
-</section>
-<section id="start-your-project-using-github-desktop" class="slide level2 smaller">
-<h2>Start your project using GitHub Desktop</h2>
-<ol type="1">
-<li><code>File</code> → <code>New Repository</code></li>
-<li>Give it a name (<code>tutorial-your-name</code>), choose a folder, tick <em>Initialize with README</em></li>
-<li>Click <strong>Create Repository</strong></li>
-<li>Click <strong>Publish repository</strong> to push it to GitHub</li>
-</ol>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>The repository now lives both <strong>on your computer</strong> and on <strong>GitHub</strong>. It is private and no one else can see it for the moment.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="some-more-information" class="slide level2">
-<h2>Some more information</h2>
-<ul>
-<li><strong>Description</strong>: will appear on the GitHub website, can be changed later</li>
-<li><strong>README</strong>: describes the project structure and how to use it, can be added and changed later</li>
-<li><strong>Git ignore</strong>: files that GitHub should not track. If you code in a specific language, choose this language in the list</li>
-<li><strong>License</strong>: useful when you make your code public (typically MIT license for academia)</li>
+<li>The projects are called “repository” or “repo”</li>
+<li>Publishing a repository does not mean you make it public: it just means that you add it to your online GitHub</li>
+<li>The projects lives online and offline, on your computer (in a folder)</li>
+<li>You can make a project “public” once it is ready to be shown and used by everyone</li>
 </ul>
 </section></section>
 <section>
-<section id="track-changes" class="title-slide slide level1 center" style="text-align: center;">
-<h1>Track changes</h1>
+<section id="tutorial-block-2-modify-files-and-see-changes" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Tutorial Block 2: modify files and see changes</h1>
 
-</section>
-<section id="make-and-track-changes" class="slide level2">
-<h2>Make and track changes</h2>
-<p>Try the following:</p>
-<ol type="1">
-<li>Add the files from the repository you cloned (<code>tutorial-repo</code>) to your own repository</li>
-<li>See how GitHub Desktop reacts</li>
-<li>Add a summary and record (=commit) your changes</li>
-<li>Upload (=push) your commit to the online repository</li>
-<li>Change the file <code>comment_sample</code> and see how GitHub Desktop reacts</li>
-<li>Commit and push</li>
-</ol>
-</section>
-<section id="core-concepts-the-three-areas" class="slide level2 smaller">
-<h2>Core concepts: the three areas</h2>
-<p><br></p>
-<div class="r-fit-text">
-<pre><code>Working Directory  →  Staging Area         →    Repository
-   (your files)       (selected changes)        (permanent snapshot)</code></pre>
-</div>
-<p>Think of it like writing a paper:</p>
-<ul>
-<li><strong>Working Directory</strong> → your working draft</li>
-<li><strong>Staging Area</strong> → pages you’ve selected to submit</li>
-<li><strong>Repository</strong> → the final, submitted version (that you can still revise!)</li>
-</ul>
 </section>
 <section id="the-commit-heart-of-git" class="slide level2 smaller">
 <h2>The commit: heart of Git</h2>
@@ -591,67 +485,6 @@ So far, your Git repository lives **only locally** on your computer
 ❌ "fixed stuff"
 ❌ "asdfgh"</code></pre>
 </section>
-<section id="make-and-track-changes-in-code" class="slide level2">
-<h2>Make and track changes in code</h2>
-<p>Try the following:</p>
-<ol type="1">
-<li><p>Open <code>analysis.R</code> file</p></li>
-<li><p>Remove one variable from the regression model</p></li>
-<li><p>See how GitHub Desktop reacts, commit and push</p></li>
-<li><p>Ask Claude code/ChatGPT to create a new model</p></li>
-<li><p>See how GitHub Desktop reacts, commit and push</p></li>
-</ol>
-</section>
-<section id="what-to-track-and-what-not-to-track" class="slide level2 smaller">
-<h2>What to track (and what NOT to track)</h2>
-<p><strong>✅ Track these:</strong></p>
-<ul>
-<li>R, Python, Stata scripts (<code>.R</code>, <code>.py</code>, <code>.do</code>)</li>
-<li>Quarto / RMarkdown files (<code>.qmd</code>, <code>.Rmd</code>)</li>
-<li>(Small) raw data files (with permission)</li>
-<li>Documentation and codebooks</li>
-</ul>
-<p><strong>❌ Do not track these (use <code>.gitignore</code>):</strong></p>
-<ul>
-<li>Large datasets (use a Data Repository)</li>
-<li>Sensitive / personally identifiable data</li>
-<li>Temporary files (<code>.Rhistory</code>, <code>__pycache__</code>)</li>
-<li>Output files that can be regenerated</li>
-</ul>
-</section>
-<section id="ingnoring-things" class="slide level2">
-<h2>Ingnoring things</h2>
-<ul>
-<li>Not all files are useful
-<ul>
-<li>Editor backup files</li>
-<li>Temporary files</li>
-<li>Intermediate analysis files</li>
-</ul></li>
-</ul>
-<p><strong>.gitignore</strong></p>
-<ul>
-<li><code>.gitignore</code> is a special file in your repository root
-<ul>
-<li>It tells <code>git</code> to ignore specified files/directories</li>
-<li>It should be committed in your repository</li>
-</ul></li>
-</ul>
-</section>
-<section id="example-do-not-track-sensible-or-large-data" class="slide level2">
-<h2>Example: do not track sensible or large data</h2>
-<ol type="1">
-<li>Create a folder <code>sensitive_data</code></li>
-<li>Add a csv file or anything else inside</li>
-<li>Add <code>sentitive_data/</code> to the <code>.gitignore</code>.</li>
-<li>See how GitHub Desktop reacts</li>
-</ol>
-</section></section>
-<section>
-<section id="check-the-history-of-our-work" class="title-slide slide level1 center" style="text-align: center;">
-<h1>Check the history of our work</h1>
-
-</section>
 <section id="understanding-commit-history" class="slide level2 smaller">
 <h2>Understanding Commit History</h2>
 <p>Your project’s history is a sequence of commits, each identified by a unique hash — a long alphanumeric string like <code>a3f92bc</code>.</p>
@@ -676,24 +509,20 @@ So far, your Git repository lives **only locally** on your computer
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="tutorial-block-3-clone-and-fetch" class="title-slide slide level1 center" style="text-align: center;">
+<h1>Tutorial Block 3: clone and fetch</h1>
+
 </section>
-<section id="viewing-history-and-undo-changes" class="slide level2">
-<h2>Viewing history (and undo changes)</h2>
-<p>You can check the history of your work:</p>
+<section id="summary-block-3" class="slide level2">
+<h2>Summary Block 3</h2>
 <ul>
-<li>In GitHub Desktop</li>
-<li>In VS Code</li>
-<li>In R Studio</li>
-<li>On GitHub (web browser)</li>
-<li>Using the command line</li>
+<li>Because your project also lives online, it is not a problem if you delete it on your computer</li>
+<li>You can work on the same project from different computer, and with different persons (next session!)</li>
+<li>If you work from different computers, think about what is the most up-to-date version of your work and fetch origin</li>
 </ul>
 </section></section>
-<section id="integration-in-rstudio-and-vscode" class="title-slide slide level1 center" style="text-align: center;">
-<h1>Integration in RStudio and VSCode</h1>
-<p>Git/GitHub can also directly be used in RStudio or VSCode, instead of GitHub Desktop.</p>
-<p>Install the corresponding extensions for this.</p>
-</section>
-
 <section>
 <section id="wrap-up-and-takeaways" class="title-slide slide level1 center" style="text-align: center;">
 <h1>Wrap up and takeaways</h1>
@@ -705,8 +534,6 @@ So far, your Git repository lives **only locally** on your computer
 <li><strong>Commit often</strong> — small, meaningful snapshots</li>
 <li><strong>Write good messages</strong> — future you will thank you</li>
 <li><strong>Push to GitHub</strong> — backup, collaboration, transparency</li>
-<li><strong>Use <code>.gitignore</code></strong> — keep sensitive data out</li>
-<li><strong>Branch freely</strong> — experiment without fear (next training session!)</li>
 </ol>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -726,6 +553,24 @@ So far, your Git repository lives **only locally** on your computer
 <h2>Seriously, <code>git push</code> when done…</h2>
 
 <img data-src="images/git_fire_notice.jpg" class="r-stretch quarto-figure-center"><p class="caption">A sign: In case of fire 1. git commit, 2. git push, 3. leave building</p></section>
+<section id="advantages" class="slide level2">
+<h2>Advantages…</h2>
+<ul>
+<li><strong>Intentional history</strong> — every saved version has a message explaining why it changed, not just when</li>
+<li><strong>Works on anything</strong> — code, data, config files, and integrates with automation tools far beyond what a document editor supports</li>
+<li><strong>Real collaboration</strong> — branching and merging let multiple people work in parallel without overwriting each other</li>
+</ul>
+</section>
+<section id="and-disadvantages" class="slide level2 smaller">
+<h2>…and disadvantages</h2>
+<ul>
+<li><strong>Steep learning curve</strong> — Git concepts come from software development and don’t map intuitively onto research workflows</li>
+<li><strong>Non-optimal fit for common file formats</strong> — Word, Excel, and SPSS/Stata files can’t be meaningfully “diffed”</li>
+<li><strong>Data privacy risks</strong> — Sensitive survey or interview data can be accidentally exposed</li>
+<li><strong>Collaboration culture mismatch</strong> — Academics are used to email and track-changes</li>
+<li><strong>Weak institutional incentives</strong> — Few disciplines reward reproducible, version-controlled research</li>
+</ul>
+</section>
 <section id="git-reproducibility-and-open-science" class="slide level2">
 <h2>Git, reproducibility and Open Science</h2>
 <p>Git + GitHub enables powerful open science practices:</p>
@@ -781,21 +626,21 @@ So far, your Git repository lives **only locally** on your computer
 <section id="your-first-git-commands" class="slide level2">
 <h2>Your First Git Commands</h2>
 <p>Configure <code>git</code> from the command-line, here’s how:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="co"># Set up once on your machine</span></span>
-<span id="cb4-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Ada Lovelace"</span></span>
-<span id="cb4-3"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"ada@research.ac"</span></span>
-<span id="cb4-4"><a href=""></a></span>
-<span id="cb4-5"><a href=""></a><span class="co"># Start tracking a project</span></span>
-<span id="cb4-6"><a href=""></a><span class="fu">git</span> init</span>
-<span id="cb4-7"><a href=""></a></span>
-<span id="cb4-8"><a href=""></a><span class="co"># See what has changed</span></span>
-<span id="cb4-9"><a href=""></a><span class="fu">git</span> status</span>
-<span id="cb4-10"><a href=""></a></span>
-<span id="cb4-11"><a href=""></a><span class="co"># Stage a file</span></span>
-<span id="cb4-12"><a href=""></a><span class="fu">git</span> add analysis.R</span>
-<span id="cb4-13"><a href=""></a></span>
-<span id="cb4-14"><a href=""></a><span class="co"># Save a snapshot with a message</span></span>
-<span id="cb4-15"><a href=""></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add baseline regression model"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-label="1"></a><span class="co"># Set up once on your machine</span></span>
+<span id="cb3-2"><a href="" aria-label="2"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Ada Lovelace"</span></span>
+<span id="cb3-3"><a href="" aria-label="3"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"ada@research.ac"</span></span>
+<span id="cb3-4"><a href="" aria-label="4"></a></span>
+<span id="cb3-5"><a href="" aria-label="5"></a><span class="co"># Start tracking a project</span></span>
+<span id="cb3-6"><a href="" aria-label="6"></a><span class="fu">git</span> init</span>
+<span id="cb3-7"><a href="" aria-label="7"></a></span>
+<span id="cb3-8"><a href="" aria-label="8"></a><span class="co"># See what has changed</span></span>
+<span id="cb3-9"><a href="" aria-label="9"></a><span class="fu">git</span> status</span>
+<span id="cb3-10"><a href="" aria-label="10"></a></span>
+<span id="cb3-11"><a href="" aria-label="11"></a><span class="co"># Stage a file</span></span>
+<span id="cb3-12"><a href="" aria-label="12"></a><span class="fu">git</span> add analysis.R</span>
+<span id="cb3-13"><a href="" aria-label="13"></a></span>
+<span id="cb3-14"><a href="" aria-label="14"></a><span class="co"># Save a snapshot with a message</span></span>
+<span id="cb3-15"><a href="" aria-label="15"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add baseline regression model"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="multiple-contributors-branching" class="slide level2">
 <h2>Multiple contributors (branching)</h2>
@@ -858,7 +703,7 @@ So far, your Git repository lives **only locally** on your computer
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\">\u003ckbd>b\u003c/kbd> Toggle Chalkboard\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"6\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\">\u003ckbd>c\u003c/kbd> Toggle Notes Canvas\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"7\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\">\u003ckbd>d\u003c/kbd> Download Drawings\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"8\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'chalkboard': {"buttons":false},
 'smaller': false,
  
@@ -1114,7 +959,8 @@ So far, your Git repository lives **only locally** on your computer
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -1123,8 +969,69 @@ So far, your Git repository lives **only locally** on your computer
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -1138,6 +1045,7 @@ So far, your Git repository lives **only locally** on your computer
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;
