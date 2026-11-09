@@ -29,7 +29,7 @@ format:
 ## Any knowledge yet?
 
 * How many of you are already familiar with Git/GitHub and/or other so called "version control" systems?
-* How many of you have already installed Git on your computer?
+* How many of you have already installed GitHub Desktop on your computer?
 
 ## Agenda for today
 
@@ -45,7 +45,7 @@ format:
 
 * Understand the basics of automated version control
 * Understand the basics of `git` and `GitHub`
-* Make use of `git` and `GitHub` with tools like `VS Code` and `R Studio`
+* Use GitHub Desktop to control the different version of a mock project
 * Be introduced on how to apply version control to your research
 
 ## A problem we all know
@@ -111,20 +111,6 @@ Git is a core infrastructure for [**reproducible research**](https://book.the-tu
 :::
 
 
-## Advantages...
-
-- **Intentional history** — every saved version has a message explaining why it changed, not just when
-- **Works on anything** — code, data, config files, and integrates with automation tools far beyond what a document editor supports
-- **Real collaboration** — branching and merging let multiple people work in parallel without overwriting each other
-
-## ...and disadvantages {.smaller}
-
-- **Steep learning curve** — Git concepts come from software development and don't map intuitively onto research workflows
-- **Non-optimal fit for common file formats** — Word, Excel, and SPSS/Stata files can't be meaningfully "diffed"
-- **Data privacy risks** — Sensitive survey or interview data can be accidentally exposed
-- **Collaboration culture mismatch** — Academics are used to email and track-changes
-- **Weak institutional incentives** — Few disciplines reward reproducible, version-controlled research
-
 ## You may also wonder...
 
 What about: 
@@ -183,94 +169,16 @@ Read more about GitHub in [GitHub doc](https://docs.github.com/en){target="_blan
 Other platforms: [GitLab](https://about.gitlab.com/){target="_blank"}, [Bitbucket](https://bitbucket.org/){target="_blank"} — same Git, different banks.
 :::
 
-# Let's create a repository with Git and GitHub {style="text-align: center;" .center}
+# Tutorial Block 1: create your first repository {style="text-align: center;" .center}
 
-## Prerequisites:
+## Summary Block 1
 
-1. Download and install Git from the [Git website](https://git-scm.com/install/){target="_blank"}
-2. Create a GitHub account on [GitHub](https://github.com/signup){target="_blank"}
-3. Download and install [GitHub Desktop](https://github.com/signup){target="_blank"}
-4. Configure Git [[Using GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop){data-preview-link="true"} or command line] (only the first time)
+- The projects are called "repository" or "repo"
+- Publishing a repository does not mean you make it public: it just means that you add it to your online GitHub
+- The projects lives online and offline, on your computer (in a folder)
+- You can make a project "public" once it is ready to be shown and used by everyone
 
-::: {.callout-note appearance="minimal"}
-If you work with `VS Code` or `R Studio` we will set them up later
-:::
-
-## Download (=clone) a project (=repository) using GitHub {.smaller}
-
-**GitHub as a way to share data and code**
-
-* Who have seen/used GitHub online repositories?
-* In addition to the files it contains, what else can we see?
-
-**Create a local copy (=a clone) of the online (=remote) repository**
-
-1. `File` → `Clone repository ...`
-2. Pick `URL` and paste `https://github.com/mdubied/tutorial-repo.git`
-3. Choose a local path on your computer where you want to store the repository
-
-* What elements does your local folder contain?
-
-<!--
-## Start you own project using Git
-1. Create a folder (on your computer)
-2. Init a local repository within the folder
-3. Create/add your first file
-4. Now on, Git will monitor the folder for changes
-::: {.callout-tip}
-So far, your Git repository lives **only locally** on your computer
-:::
--->
-
-## Start your project using GitHub Desktop {.smaller}
-
-1. `File` → `New Repository`
-2. Give it a name (`tutorial-your-name`), choose a folder, tick *Initialize with README*
-3. Click **Create Repository**
-4. Click **Publish repository** to push it to GitHub
-
-::: {.callout-tip}
-The repository now lives both **on your computer** and on **GitHub**. It is private and no one else can see it for the moment.
-:::
-
-## Some more information
-
-* **Description**: will appear on the GitHub website, can be changed later
-* **README**: describes the project structure and how to use it, can be added and changed later
-* **Git ignore**: files that GitHub should not track. If you code in a specific language, choose this language in the list
-* **License**: useful when you make your code public (typically MIT license for academia)
-
-# Track changes {style="text-align: center;" .center}
-
-## Make and track changes
-
-Try the following:
-
-1. Add the files from the repository you cloned (`tutorial-repo`) to your own repository
-2. See how GitHub Desktop reacts
-3. Add a summary and record (=commit) your changes 
-4. Upload (=push) your commit to the online repository
-5. Change the file `comment_sample` and see how GitHub Desktop reacts
-6. Commit and push
-
-## Core concepts: the three areas {.smaller}
-
-<br />
-
-::: {.r-fit-text }
-
-```
-Working Directory  →  Staging Area         →    Repository
-   (your files)       (selected changes)        (permanent snapshot)
-```
-
-:::
-
-Think of it like writing a paper:
-
-- **Working Directory** → your working draft
-- **Staging Area** → pages you've selected to submit
-- **Repository** → the final, submitted version (that you can still revise!)
+# Tutorial Block 2: modify files and see changes {style="text-align: center;" .center}
 
 ## The commit: heart of Git {.smaller}
 
@@ -299,54 +207,6 @@ What is likely to happen…
 ❌ "asdfgh"
 ```
 
-## Make and track changes in code
-
-Try the following:
-
-1. Open `analysis.R` file
-2. Remove one variable from the regression model
-3. See how GitHub Desktop reacts, commit and push
-
-4. Ask Claude code/ChatGPT to create a new model
-5. See how GitHub Desktop reacts, commit and push
-
-## What to track (and what NOT to track){.smaller}
-
-**✅ Track these:**
-
-- R, Python, Stata scripts (`.R`, `.py`, `.do`)
-- Quarto / RMarkdown files (`.qmd`, `.Rmd`)
-- (Small) raw data files (with permission)
-- Documentation and codebooks
-
-**❌ Do not track these (use `.gitignore`):**
-
-- Large datasets (use a Data Repository)
-- Sensitive / personally identifiable data
-- Temporary files (`.Rhistory`, `__pycache__`)
-- Output files that can be regenerated
-
-## Ingnoring things
-
-* Not all files are useful
-  * Editor backup files
-  * Temporary files
-  * Intermediate analysis files
-
-**.gitignore**
-
-* `.gitignore` is a special file in your repository root
-  * It tells `git` to ignore specified files/directories
-  * It should be committed in your repository
-
-## Example: do not track sensible or large data
-
-1. Create a folder `sensitive_data`
-2. Add a csv file or anything else inside
-3. Add `sentitive_data/` to the `.gitignore`. 
-4. See how GitHub Desktop reacts
-
-# Check the history of our work {style="text-align: center;" .center}
 
 ## Understanding Commit History {.smaller}
 Your project's history is a sequence of commits, each identified by a unique hash — a long alphanumeric string like `a3f92bc`. 
@@ -363,21 +223,13 @@ Each commit records:
 This **chain of commits** is what makes Git a reliable audit trail — equivalent to a laboratory notebook for your research.
 :::
 
-## Viewing history (and undo changes)
+# Tutorial Block 3: clone and fetch {style="text-align: center;" .center}
 
-You can check the history of your work:
+## Summary Block 3
 
-- In GitHub Desktop
-- In VS Code
-- In R Studio
-- On GitHub (web browser)
-- Using the command line
-
-# Integration in RStudio and VSCode {style="text-align: center;" .center}
-
-Git/GitHub can also directly be used in RStudio or VSCode, instead of GitHub Desktop. 
-
-Install the corresponding extensions for this.
+- Because your project also lives online, it is not a problem if you delete it on your computer
+- You can work on the same project from different computer, and with different persons (next session!)
+- If you work from different computers, think about what is the most up-to-date version of your work and fetch origin
 
 # Wrap up and takeaways {style="text-align: center;" .center}
 
@@ -387,8 +239,7 @@ Install the corresponding extensions for this.
 1. **Commit often** — small, meaningful snapshots
 2. **Write good messages** — future you will thank you
 3. **Push to GitHub** — backup, collaboration, transparency
-4. **Use `.gitignore`** — keep sensitive data out
-5. **Branch freely** — experiment without fear (next training session!)
+
 
 ::: {.callout-tip}
 **Git gives your research a memory.**
@@ -398,6 +249,20 @@ Install the corresponding extensions for this.
 
 ![A sign: In case of fire 1. git commit, 2. git push, 3. leave building](images/git_fire_notice.jpg){.r-stretch}
 
+
+## Advantages...
+
+- **Intentional history** — every saved version has a message explaining why it changed, not just when
+- **Works on anything** — code, data, config files, and integrates with automation tools far beyond what a document editor supports
+- **Real collaboration** — branching and merging let multiple people work in parallel without overwriting each other
+
+## ...and disadvantages {.smaller}
+
+- **Steep learning curve** — Git concepts come from software development and don't map intuitively onto research workflows
+- **Non-optimal fit for common file formats** — Word, Excel, and SPSS/Stata files can't be meaningfully "diffed"
+- **Data privacy risks** — Sensitive survey or interview data can be accidentally exposed
+- **Collaboration culture mismatch** — Academics are used to email and track-changes
+- **Weak institutional incentives** — Few disciplines reward reproducible, version-controlled research
 
 ## Git, reproducibility and Open Science
 
