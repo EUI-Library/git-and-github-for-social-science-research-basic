@@ -37,7 +37,6 @@ format:
 * Setting up the environment
 * Your first (or maybe not?) repository
 * The git (and GitHub) workflow to track changes
-* Looking at the history of your changes and what "undo" means
 
 # Introduction {style="text-align: center;" .center}
 
@@ -77,7 +76,7 @@ my_analysis_THIS_ONE.R
 ## A solution: version control
 
 * We can record who made which changes, and when
-* We can revert to previous versions
+* We can identify "versions" and revert to previous ones
 * We can identify and correct conflicts (e.g. possible overwriting)
 * Nothing that is *committed* is *ever* lost (unless you try hard…)
 
@@ -135,8 +134,6 @@ Git is a **version control system** — a tool that tracks changes to files over
 - Enables safe collaboration with others
 
 ::: {.callout-note appearance="minimal"}
-Version control is like an **unlimited ‘undo/redo’**
-
 Originally built for software — now essential for research.
 :::
 
