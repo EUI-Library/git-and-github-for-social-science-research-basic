@@ -187,8 +187,8 @@ Other platforms: [GitLab](https://about.gitlab.com/){target="_blank"}, [Bitbucke
 - The projects lives online and offline, on your computer (in a folder)
 - You can make a project "public" once it is ready to be shown and used by everyone
 
-## Setup your future projects to ignore some of your files
-[![](images/new_project_setup.png)]
+## Set up your future projects to ignore some of your files
+![](images/new_project_setup.png)
 
 Choose your programming language directly when creating a new project
 
