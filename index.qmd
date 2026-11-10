@@ -280,9 +280,9 @@ A public GitHub repository is increasingly expected at submission.
 
 ## Your feedback matters! 
 
-![](/images/QRCode%20for%20Git%20and%20GitHub%20for%20Social%20Science%20Research_%20basic%20level.png){fig-align="center"}
+![](/images/QRCode_20261110.png){fig-align="center"}
 
-Link: [https://forms.cloud.microsoft/e/dZwq7DAWPE](https://forms.cloud.microsoft/e/dZwq7DAWPE)
+Link: [https://forms.cloud.microsoft/e/ng0i1fhJxp](https://forms.cloud.microsoft/e/ng0i1fhJxp)
 
 
 ## Any question? {style="text-align: center;" .center background-image="/images/just_science_done_right.png" background-position="top right" background-repeat="no-repeat" background-size="15%" .smaller}
