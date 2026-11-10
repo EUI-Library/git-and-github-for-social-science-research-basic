@@ -39,7 +39,7 @@ format:
 * The git (and GitHub) workflow to track changes
 
 ::: {.callout-note appearance="minimal"}
-Some of the vocabulary we will be using today are specific to git/GitHub: don't be hesitate to ask if something is unclear!
+Some of the vocabulary we will be using today are specific to git/GitHub: don't hesitate to ask if something is unclear!
 :::
 
 # Introduction {style="text-align: center;" .center}
@@ -184,7 +184,7 @@ Other platforms: [GitLab](https://about.gitlab.com/){target="_blank"}, [Bitbucke
 
 - The projects are called "repository" or "repo"
 - Publishing a repository does not mean you make it public: it just means that you add it to your online GitHub
-- The projects lives online and offline, on your computer (in a folder)
+- The projects lives online (on GitHub cloud/website) and offline (on your computer, in a folder)
 - You can make a project "public" once it is ready to be shown and used by everyone
 
 ## Set up for a programming language
