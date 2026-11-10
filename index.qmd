@@ -38,6 +38,10 @@ format:
 * Your first (or maybe not?) repository
 * The git (and GitHub) workflow to track changes
 
+::: {.callout-note appearance="minimal"}
+Some of the vocabulary we will be using today are specific to git/GitHub: don't hesitate to ask if something is unclear!
+:::
+
 # Introduction {style="text-align: center;" .center}
 
 ## Learning objetives
@@ -76,7 +80,7 @@ my_analysis_THIS_ONE.R
 ## A solution: version control
 
 * We can record who made which changes, and when
-* We can identify "versions" and revert to previous ones
+* We can revert to previous versions
 * We can identify and correct conflicts (e.g. possible overwriting)
 * Nothing that is *committed* is *ever* lost (unless you try hard…)
 
@@ -166,14 +170,27 @@ Read more about GitHub in [GitHub doc](https://docs.github.com/en){target="_blan
 Other platforms: [GitLab](https://about.gitlab.com/){target="_blank"}, [Bitbucket](https://bitbucket.org/){target="_blank"} — same Git, different banks.
 :::
 
+# Tutorials
+
+## 3 separate blocks
+
+- Block 1: create your first repository
+- Block 2: modify files and see changes
+- Block 3: clone and fetch (or simpler: synchronize your computer with the latest online version of your work)
+
 # Tutorial Block 1: create your first repository {style="text-align: center;" .center}
 
 ## Summary Block 1
 
 - The projects are called "repository" or "repo"
 - Publishing a repository does not mean you make it public: it just means that you add it to your online GitHub
-- The projects lives online and offline, on your computer (in a folder)
+- The projects lives online (on GitHub cloud/website) and offline (on your computer, in a folder)
 - You can make a project "public" once it is ready to be shown and used by everyone
+
+## Set up for a programming language
+![](images/new_project_setup.png){.r-stretch}
+
+Choose your programming language directly when creating a new project, so as to ignore some of the files it produces automatically
 
 # Tutorial Block 2: modify files and see changes {style="text-align: center;" .center}
 
@@ -281,6 +298,11 @@ A public GitHub repository is increasingly expected at submission.
 
 Link: [https://forms.cloud.microsoft/e/ng0i1fhJxp](https://forms.cloud.microsoft/e/ng0i1fhJxp)
 
+## Three more tutorials
+
+- Working with senstiive data: how to avoid tracking every file
+- Working with VS code
+- Working with R Studio
 
 ## Any question? {style="text-align: center;" .center background-image="/images/just_science_done_right.png" background-position="top right" background-repeat="no-repeat" background-size="15%" .smaller}
 
